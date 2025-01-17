@@ -1,5 +1,7 @@
 **Quarto Portfolio Instructions:**
 
+This page contains all the files you need to set up your own E-Portfolio using Quarto & GitHub. To use these files, 'fork' this repository. Using your Github Desktop app, you can then 'fetch the origin' - aka pull these files onto your computer, and make edits. First, open the "\_quarto.yml" file and change the output directory to your local repository folder. Next, personalize your page by opening the Quarto (qmd) files in R-Studio and adding your content. Once you are finished adding content, make sure you commit all of your edits to your GitHub repository. If you want to add any pages, simply create a new quarto document, and index it in the "\_quarto.yml" following the provided formatting.
+
 Before we begin, make sure you have Github desktop installed on your device, that you are logged in to your github account in the desktop app, and that you have R-Studio installed on your device.
 
 1.  Navigate to the sample repository using the link above.
