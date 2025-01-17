@@ -36,16 +36,23 @@ Sample code snippet. Notice that you can provide a toggle to switch between codi
 ## R
 
 ``` (.r)
-calc_ndvi <- function(nir, red){ ndvi <- (nir-red)/(nir+red) return(ndvi) }
+calc_ndvi <- function(nir, red){
+  ndvi <- (nir-red)/(nir+red)
+  return(ndvi)
+}
 ```
+
+(Assuming *nir* and *red* are terra rast objects)
 
 ## Python
 
 ``` (.python)
 def calc_ndvi(nir, red): 
-  ndvi = (nir.astype(float)-red.astype(float))/(nir.astype(float)+red.astype(float))
+  ndvi = (nir - red)/(nir + red)
   return(ndvi)
 ```
+
+(Assuming *nir* and *red* are numpy arrays)
 :::
 
 ## External links
