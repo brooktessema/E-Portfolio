@@ -2,7 +2,7 @@
 title: "Resume"
 ---
 
-# Education 2
+# Education
 
 -   List your education here.
 
