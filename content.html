@@ -184,8 +184,8 @@ ul.task-list li input[type="checkbox"] {
 <p>Sample leaflet - for detailed leaflet instructions, visit the FCOR 599 workshop archive page <a href="https://ubc-mgem-fcor599.github.io/FCOR-599-Workshops/Interactive_Maps/leaflet.html">here</a>.</p>
 <div class="cell">
 <div class="cell-output-display">
-<div class="leaflet html-widget html-fill-item" id="htmlwidget-f00a005b1c208c05674a" style="width:100%;height:464px;"></div>
-<script type="application/json" data-for="htmlwidget-f00a005b1c208c05674a">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addProviderTiles","args":["Esri.WorldImagery",null,null,{"errorTileUrl":"","noWrap":false,"detectRetina":false}]},{"method":"addScaleBar","args":[{"maxWidth":100,"metric":true,"imperial":true,"updateWhenIdle":true,"position":"bottomleft"}]}],"setView":[[49.2827,-123.1207],11,[]]},"evals":[],"jsHooks":[]}</script>
+<div class="leaflet html-widget html-fill-item" id="htmlwidget-a7d091dcbd3431fbce2c" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-a7d091dcbd3431fbce2c">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addProviderTiles","args":["Esri.WorldImagery",null,null,{"errorTileUrl":"","noWrap":false,"detectRetina":false}]},{"method":"addScaleBar","args":[{"maxWidth":100,"metric":true,"imperial":true,"updateWhenIdle":true,"position":"bottomleft"}]}],"setView":[[49.2827,-123.1207],11,[]]},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </section>
@@ -196,21 +196,33 @@ ul.task-list li input[type="checkbox"] {
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">R</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Python</a></li></ul>
 <div class="tab-content" data-group="language">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
-<pre class="(.r)"><code>calc_ndvi &lt;- function(nir, red){ ndvi &lt;- (nir-red)/(nir+red) return(ndvi) }</code></pre>
+<pre class="(.r)"><code>calc_ndvi &lt;- function(nir, red){
+  ndvi &lt;- (nir-red)/(nir+red)
+  return(ndvi)
+}</code></pre>
+<p>(Assuming <em>nir</em> and <em>red</em> are terra rast objects)</p>
 </div>
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
 <pre class="(.python)"><code>def calc_ndvi(nir, red): 
-  ndvi = (nir.astype(float)-red.astype(float))/(nir.astype(float)+red.astype(float))
+  ndvi = (nir - red)/(nir + red)
   return(ndvi)</code></pre>
+<p>(Assuming <em>nir</em> and <em>red</em> are numpy arrays)</p>
 </div>
 </div>
 </div>
 </section>
 <section id="external-links" class="level2">
 <h2 class="anchored" data-anchor-id="external-links">External links</h2>
-<p>You can also provide a frame linking to external websites. For example, here is a link to a Google Earth Engine application I developed. The full-screen GEE application is available <a href="https://ee-melserramon.projects.earthengine.app/view/thermal-analysis-tool">here</a> in case you’re interested.</p>
+<p>You can also provide a frame linking to external websites. For example, here is a Google Earth Engine application I developed - which I embedded in this webpage using the code below:</p>
+<div class="cell">
+<pre class="code cell-code"><code>
+&lt;iframe width="900" height="700"
+src="https://ee-melserramon.projects.earthengine.app/view/thermal-analysis-tool"&gt;
+&lt;/iframe&gt;</code></pre>
+</div>
+<p>The full-screen GEE application is available <a href="https://ee-melserramon.projects.earthengine.app/view/thermal-analysis-tool">here</a> in case you’re interested.</p>
 <p>(To use the GEE tool, navigate to any city you’d like, hit apply filters, and click anywhere on the map to retrieve a time-series of Landsat surface temperature observations for that point. Areas where the maximum temp exceeded 35 degrees Celsius in your date-range are highlighted in red.)</p>
-<iframe width="900" height="700" src="https://ee-melserramon.projects.earthengine.app/view/thermal-analysis-tool" title="Webpage example"></iframe>
+<iframe width="900" height="700" src="https://ee-melserramon.projects.earthengine.app/view/thermal-analysis-tool"></iframe>
 
 
 </section>

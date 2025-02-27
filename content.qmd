@@ -36,24 +36,41 @@ Sample code snippet. Notice that you can provide a toggle to switch between codi
 ## R
 
 ``` (.r)
-calc_ndvi <- function(nir, red){ ndvi <- (nir-red)/(nir+red) return(ndvi) }
+calc_ndvi <- function(nir, red){
+  ndvi <- (nir-red)/(nir+red)
+  return(ndvi)
+}
 ```
+
+(Assuming *nir* and *red* are terra rast objects)
 
 ## Python
 
 ``` (.python)
 def calc_ndvi(nir, red): 
-  ndvi = (nir.astype(float)-red.astype(float))/(nir.astype(float)+red.astype(float))
+  ndvi = (nir - red)/(nir + red)
   return(ndvi)
 ```
+
+(Assuming *nir* and *red* are numpy arrays)
 :::
 
 ## External links
 
-You can also provide a frame linking to external websites. For example, here is a link to a Google Earth Engine application I developed. The full-screen GEE application is available [here](https://ee-melserramon.projects.earthengine.app/view/thermal-analysis-tool) in case you're interested.
+You can also provide a frame linking to external websites. For example, here is a Google Earth Engine application I developed - which I embedded in this webpage using the code below:
+
+```{code}
+
+<iframe width="900" height="700"
+src="https://ee-melserramon.projects.earthengine.app/view/thermal-analysis-tool">
+</iframe>
+```
+
+The full-screen GEE application is available [here](https://ee-melserramon.projects.earthengine.app/view/thermal-analysis-tool) in case you're interested.
 
 (To use the GEE tool, navigate to any city you'd like, hit apply filters, and click anywhere on the map to retrieve a time-series of Landsat surface temperature observations for that point. Areas where the maximum temp exceeded 35 degrees Celsius in your date-range are highlighted in red.)
 
+
 ```{=html}
-<iframe width="900" height="700" src="https://ee-melserramon.projects.earthengine.app/view/thermal-analysis-tool" title="Webpage example"></iframe>
+<iframe width="900" height="700" src="https://ee-melserramon.projects.earthengine.app/view/thermal-analysis-tool"></iframe>
 ```
