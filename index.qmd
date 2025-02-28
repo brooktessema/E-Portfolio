@@ -1,8 +1,8 @@
 ---
-title: "Your E-Portfolio"
-image: images/MGEM_logo.png
+title: "My E-Portfolio"
+image: images/BT_Picture_2.jpg
 about:
-  template: trestles
+  template: jolla
   image-width: 20em
   links: 
     - icon: linkedin
