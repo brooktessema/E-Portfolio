@@ -124,6 +124,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#using-python-for-geo-spatial-analysis" id="toc-using-python-for-geo-spatial-analysis" class="nav-link" data-scroll-target="#using-python-for-geo-spatial-analysis"><strong>Using Python for Geo-spatial Analysis</strong></a></li>
   <li><a href="#investigating-species-movement-corridors" id="toc-investigating-species-movement-corridors" class="nav-link" data-scroll-target="#investigating-species-movement-corridors"><strong>Investigating Species Movement Corridors</strong></a></li>
   <li><a href="#lidar-data-processing-from-basics-to-tree-segmentation" id="toc-lidar-data-processing-from-basics-to-tree-segmentation" class="nav-link" data-scroll-target="#lidar-data-processing-from-basics-to-tree-segmentation"><strong>LiDAR Data Processing: From Basics to Tree Segmentation</strong></a></li>
+  <li><a href="#modeling-forest-landscape-changes-with-markov-models" id="toc-modeling-forest-landscape-changes-with-markov-models" class="nav-link" data-scroll-target="#modeling-forest-landscape-changes-with-markov-models"><strong>Modeling Forest Landscape Changes with Markov Models</strong></a></li>
   <li><a href="#exploring-urban-expansion-in-the-kitchener-waterloo-region-my-first-project" id="toc-exploring-urban-expansion-in-the-kitchener-waterloo-region-my-first-project" class="nav-link" data-scroll-target="#exploring-urban-expansion-in-the-kitchener-waterloo-region-my-first-project"><strong>Exploring Urban Expansion in the Kitchener-Waterloo Region: My First Project</strong></a></li>
   <li><a href="#code-snippets" id="toc-code-snippets" class="nav-link" data-scroll-target="#code-snippets">Code Snippets</a></li>
   <li><a href="#external-links" id="toc-external-links" class="nav-link" data-scroll-target="#external-links">External links</a></li>
@@ -319,6 +320,44 @@ This assignment expanded my interest in species conservation by showing me how s
 <hr>
 </section>
 </section>
+<section id="modeling-forest-landscape-changes-with-markov-models" class="level3">
+<h3 class="anchored" data-anchor-id="modeling-forest-landscape-changes-with-markov-models"><strong>Modeling Forest Landscape Changes with Markov Models</strong></h3>
+<p>As part of my Landscape Ecology course, I explored Markov models, a tool widely used in landscape ecology to predict future land cover changes based on past transitions. One of our labs focused on modeling landscape changes in the Pacific Northwestern forests using a Markov model. By analyzing Landsat imagery data from 1972, 1984, and 1991, we classified forest cover into different age classes and calculated transition probabilities for these classes over time. The Markov model was then used to:</p>
+<ul>
+<li><p>Project future forest composition under different management scenarios.</p></li>
+<li><p>Evaluate the impact of reduced harvesting rates on forest cover types.</p></li>
+<li><p>Assess the long-term sustainability of current forest management practices.</p></li>
+</ul>
+<p>One key aspect of this project involved simulating <strong>landscape changes over 1000 years</strong>, as seen in my figure below, to examine how forest cover proportions would stabilize under different harvesting scenarios.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/Markov_Model_plot.png" class="img-fluid figure-img" width="588"></p>
+<figcaption>Simulating Longterm Transition of Forest of different age classes</figcaption>
+</figure>
+</div>
+<section id="key-findings" class="level4">
+<h4 class="anchored" data-anchor-id="key-findings">Key Findings</h4>
+<ul>
+<li><p><strong>Longer timesteps improve accuracy</strong> – The <strong>1972–1984 projection</strong> was more reliable than <strong>1984–1991</strong>, likely due to the longer timeframe capturing more stable trends.</p></li>
+<li><p><strong>Harvest rates impact old-growth forests</strong> – Reducing harvest rates slowed forest loss and increased the proportion of mature forests over time.</p></li>
+<li><p><strong>Sustainability concerns</strong> – The <strong>1972–1984 harvesting rates led to a significant decline in old-growth forests</strong>, with their proportion falling below 20%, indicating unsustainable practices.</p></li>
+<li><p><strong>Steady-state conditions</strong> – Over time, the model projected that mature forests would <strong>stabilize above 30%</strong>, but this depended on continued reductions in harvest rates.</p></li>
+</ul>
+</section>
+<section id="reflection-1" class="level4">
+<h4 class="anchored" data-anchor-id="reflection-1">Reflection</h4>
+<p>This project reinforced the well-known quote: “All models are wrong, but some are useful.” The goal was not to produce perfectly accurate predictions but rather to explore how different management decisions influence long-term forest dynamics. By adjusting harvest rates and observing their effects, I could see how even small policy changes significantly alter the landscape over time. This experience served as an important reminder that models should not be taken at face value—they are simplifications of reality and should always be interpreted with caution. The real power of models lies in their ability to help explore scenarios, test assumptions, and guide better decision-making rather than provide absolute answers.</p>
+</section>
+<section id="skills-gained-4" class="level4">
+<h4 class="anchored" data-anchor-id="skills-gained-4">Skills Gained</h4>
+<ul>
+<li><p><strong>Markov modeling</strong> for landscape change analysis</p></li>
+<li><p><strong>Evaluating long-term impacts</strong> of forest management decisions</p></li>
+<li><p><strong>Interpreting model outputs</strong> while considering their limitations</p></li>
+</ul>
+<hr>
+</section>
+</section>
 <section id="exploring-urban-expansion-in-the-kitchener-waterloo-region-my-first-project" class="level3">
 <h3 class="anchored" data-anchor-id="exploring-urban-expansion-in-the-kitchener-waterloo-region-my-first-project"><strong>Exploring Urban Expansion in the Kitchener-Waterloo Region: My First Project</strong></h3>
 <p>Reflecting on this project always brings me back to the early days of my remote sensing journey. It was during my undergraduate years, when I first introduced to the field of geomatics, and intrigued by the idea of examining the world from a distance and without physical contact a.k.a “remote sensing”. This project marked the beginning of my journey in remote sensing and how satellite imagery can reveal changes in the world over time.</p>
@@ -330,12 +369,12 @@ This assignment expanded my interest in species conservation by showing me how s
 <h4 class="anchored" data-anchor-id="results"><strong>Results:</strong></h4>
 <p>SLIDER WITH TWO IMAGES</p>
 </section>
-<section id="reflection-1" class="level4">
-<h4 class="anchored" data-anchor-id="reflection-1"><strong>Reflection:</strong></h4>
+<section id="reflection-2" class="level4">
+<h4 class="anchored" data-anchor-id="reflection-2"><strong>Reflection:</strong></h4>
 <p>Looking at this project now, I can’t help but reflect on how much I’ve grown in the remote sensing field. At the time, I was just starting to understand the process, working with image classification but without any coding. Today, I’m able to tackle much more complex analyses and understand the underlying principles more deeply.</p>
 </section>
-<section id="skills-gained-4" class="level4">
-<h4 class="anchored" data-anchor-id="skills-gained-4"><strong>Skills Gained:</strong></h4>
+<section id="skills-gained-5" class="level4">
+<h4 class="anchored" data-anchor-id="skills-gained-5"><strong>Skills Gained:</strong></h4>
 <ul>
 <li><p>Image Classification</p></li>
 <li><p>Change Detection Analysis</p></li>
