@@ -4,7 +4,7 @@ format: html
 editor: visual
 ---
 
-Welcome to my Geospatial Projects page!
+Welcome to the Geospatial Projects page!
 
 Here, you'll find a collection of my work, showcasing my journey from the humble beginnings of exploring geospatial data to tackling advanced projects in my graduate studies. Each project highlights my growth in using spatial analysis tools to address real-world environmental challenges.
 
@@ -103,30 +103,33 @@ print(f'Contents extracted to: {extract_file}')
 ## Geo-Processing Steps
 
 ``` (.python)
-# Using Intersect to extract mangroves in AOI from Global Mangrove Watch (GMW) Data
-arcpy.analysis.Intersect(['gmw_v3_2020_vec.shp',
-                          'TAHIRY_HONKO_MANAGEMENT_AREA.shp'], 
-                          "boa_mangroves.shp", "ALL") 
-print('Mangroves clipped successfully.')
+    # Term Concept 2.1 - Using Intersect to extract mangroves in AOI 
+    from Global Mangrove Watch (GMW) Data
+    arcpy.analysis.Intersect(['gmw_v3_2020_vec.shp',   
+    'TAHIRY_HONKO_MANAGEMENT_AREA.shp'], 
+    "boa_mangroves.shp", "ALL") 
+    print('Mangroves clipped successfully.')
 
-# Creating the 25 meter buffer for mangroves
-boa_buffer = arcpy.analysis.Buffer(in_features='boa_mangroves.shp',     
-                                  out_feature_class='boa_buffer.shp', 
-                                  buffer_distance_or_field='25 meters',   
-                                  dissolve_option="ALL")
-print('Buffer created successfully.')
+    # Term Concept 2.2 - Creating the 25 meter buffer for mangroves
+    boa_buffer = arcpy.analysis.Buffer(in_features='boa_mangroves.shp',
+    out_feature_class='boa_buffer.shp', 
+    buffer_distance_or_field='25 meters', dissolve_option="ALL")
+    print('Buffer created successfully.')
 
-# Calculating Total Area of Mangroves
-mangrove_areas = list() #Creating an empty list to store output of Search Cursor
-
-with arcpy.da.SearchCursor("boa_mangroves.shp", ["Shape_Area"]) as cursor:
-  for row in cursor:
-      mangrove_areas.append(row[0]) #adding results from Shape_Area into list
-total_area = sum(mangrove_areas) * 100 #converting area from Square Km to ha
-print("Total Mangrove Area (ha):",total_area,"ha")
-del cursor
-del row
+    #Term Concept 3 - Calculating Total Area of Mangroves
+    mangrove_areas = list() #Creating an empty list to store output of Search 
+    Cursor
+    with arcpy.da.SearchCursor("boa_mangroves.shp", ["Shape_Area"]) as cursor:
+        for row in cursor:
+            mangrove_areas.append(row[0]) #adding results from Shape_Area into 
+            list
+    total_area = sum(mangrove_areas) * 100 #converting area from Square Km to ha
+    print("Total Mangrove Area (ha):",total_area,"ha")
+    del cursor
+    del row
 ```
+
+(Assuming *nir* and *red* are numpy arrays)
 :::
 
 **Reflection:**\
@@ -178,19 +181,19 @@ This assignment expanded my interest in species conservation by showing me how s
 
 I first encountered LiDAR data during our graduate program orientation, where I was blown away by 3D visualizations created captured from a drone flight. This moment sparked my excitement to dive into the world of LiDAR and explore its potential in forestry.
 
-#### **Task 1: Getting Hands-On with LiDAR Basics**
+#### **Assignment 1: Getting Hands-On with LiDAR Basics**
 
 In this assignment, I learned how to process LiDAR data in R to create a Canopy Height Model (CHM), or as I like to call it, "tree height map." The goal was to familiarize myself with handling .las files, working with multiple tiles, and extracting point clouds from specific forest plots. I generated digital elevation models (DEMs) and CHMs to visualize tree heights and analyzed plot-level metrics to describe vegetation structure. It was a great introduction to organizing data, normalizing point clouds, and creating useful forestry products.
 
 Results of CHMs
 
-#### **Task 2: Individual Tree Segmentation**
+#### **Assignment 2: Diving Deeper with Tree Segmentation**
 
 The second assignment took me to the next level, where I worked with LiDAR data from the Malcolm Knapp Research Forest to identify individual trees. Using the [lidR](https://r-lidar.github.io/lidRbook/) package in R, I compared algorithms for tree detection by analyzing point clouds and CHMs. I fine-tuned parameters to improve results and deepened my understanding of segmentation methods through practical questions.
 
 Segmented Trees 3D Visualizations
 
-#### **Reflection:** 
+#### **Reflection:**
 
 It’s incredible to see how quickly I progressed from a curious observer to someone who can process and segment LiDAR data with confidence. Each step, from mapping terrain to identifying individual trees, has expanded my understanding of LiDAR’s potential in forestry. I'm excited to continue exploring this technology's applications in environmental monitoring.
 
@@ -208,7 +211,43 @@ It’s incredible to see how quickly I progressed from a curious observer to som
 
 -   R Programming (lidR package)
 
---------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------
+
+### Modeling Forest Landscape Changes with Markov Models
+
+As part of my Landscape Ecology course, I explored Markov models, a tool widely used in landscape ecology to predict future land cover changes based on past transitions. One of our labs focused on modeling landscape changes in the Pacific Northwestern forests using a Markov model. By analyzing Landsat imagery data from 1972, 1984, and 1991, we classified forest cover into different age classes and calculated transition probabilities for these classes over time. The Markov model was then used to:
+
+-   Project future forest composition under different management scenarios.
+
+-   Evaluate the impact of reduced harvesting rates on forest cover types.
+
+-   Assess the long-term sustainability of current forest management practices.
+
+One key aspect of this project involved simulating **landscape changes over 1000 years**, as seen in my figure below, to examine how forest cover proportions would stabilize under different harvesting scenarios.
+
+![Simulating Longterm Transition of Forest of different age classes](images/Markov_Model_plot.png){fig-align="center" width="588"}
+
+#### Key Findings
+
+-   **Longer timesteps improve accuracy** – The **1972–1984 projection** was more reliable than **1984–1991**, likely due to the longer timeframe capturing more stable trends.
+
+-   **Harvest rates impact old-growth forests** – Reducing harvest rates slowed forest loss and increased the proportion of mature forests over time.
+
+-   **Sustainability concerns** – The **1972–1984 harvesting rates led to a significant decline in old-growth forests**, with their proportion falling below 20%, indicating unsustainable practices.
+
+-   **Steady-state conditions** – Over time, the model projected that mature forests would **stabilize above 30%**, but this depended on continued reductions in harvest rates.
+
+#### Reflection
+
+This project reinforced the well-known quote: “All models are wrong, but some are useful.” The goal was not to produce perfectly accurate predictions but rather to explore how different management decisions influence long-term forest dynamics. By adjusting harvest rates and observing their effects, I could see how even small policy changes significantly alter the landscape over time. This experience served as an important reminder that models should not be taken at face value—they are simplifications of reality and should always be interpreted with caution. The real power of models lies in their ability to help explore scenarios, test assumptions, and guide better decision-making rather than provide absolute answers.
+
+#### Skills Gained
+
+-   **Markov modeling** for landscape change analysis
+
+-   **Evaluating long-term impacts** of forest management decisions
+
+-   **Interpreting model outputs** while considering their limitations
 
 ### **Exploring Urban Expansion in the Kitchener-Waterloo Region: My First Project**
 

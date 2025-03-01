@@ -97,11 +97,11 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Resume</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./content.html" aria-current="page"> 
+    <a class="nav-link" href="./content.html"> 
 <span class="menu-text">Geospatial Projects</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./career.html"> 
+    <a class="nav-link active" href="./career.html" aria-current="page"> 
 <span class="menu-text">Career Highlights</span></a>
   </li>  
 </ul>
@@ -124,6 +124,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#using-python-for-geo-spatial-analysis" id="toc-using-python-for-geo-spatial-analysis" class="nav-link" data-scroll-target="#using-python-for-geo-spatial-analysis"><strong>Using Python for Geo-spatial Analysis</strong></a></li>
   <li><a href="#investigating-species-movement-corridors" id="toc-investigating-species-movement-corridors" class="nav-link" data-scroll-target="#investigating-species-movement-corridors"><strong>Investigating Species Movement Corridors</strong></a></li>
   <li><a href="#lidar-data-processing-from-basics-to-tree-segmentation" id="toc-lidar-data-processing-from-basics-to-tree-segmentation" class="nav-link" data-scroll-target="#lidar-data-processing-from-basics-to-tree-segmentation"><strong>LiDAR Data Processing: From Basics to Tree Segmentation</strong></a></li>
+  <li><a href="#modeling-forest-landscape-changes-with-markov-models" id="toc-modeling-forest-landscape-changes-with-markov-models" class="nav-link" data-scroll-target="#modeling-forest-landscape-changes-with-markov-models">Modeling Forest Landscape Changes with Markov Models</a></li>
   <li><a href="#exploring-urban-expansion-in-the-kitchener-waterloo-region-my-first-project" id="toc-exploring-urban-expansion-in-the-kitchener-waterloo-region-my-first-project" class="nav-link" data-scroll-target="#exploring-urban-expansion-in-the-kitchener-waterloo-region-my-first-project"><strong>Exploring Urban Expansion in the Kitchener-Waterloo Region: My First Project</strong></a></li>
   <li><a href="#code-snippets" id="toc-code-snippets" class="nav-link" data-scroll-target="#code-snippets">Code Snippets</a></li>
   <li><a href="#external-links" id="toc-external-links" class="nav-link" data-scroll-target="#external-links">External links</a></li>
@@ -154,7 +155,7 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Welcome to my Geospatial Projects page!</p>
+<p>Welcome to the Geospatial Projects page!</p>
 <p>Here, you’ll find a collection of my work, showcasing my journey from the humble beginnings of exploring geospatial data to tackling advanced projects in my graduate studies. Each project highlights my growth in using spatial analysis tools to address real-world environmental challenges.</p>
 <hr>
 <section id="monitoring-mangrove-restoration-using-sentinel---2-imagery" class="level3">
@@ -222,29 +223,31 @@ with zipfile.ZipFile(zip_file_path, 'r') as zip_ref:
 print(f'Contents extracted to: {extract_file}')</code></pre>
 </div>
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
-<pre class="(.python)"><code># Using Intersect to extract mangroves in AOI from Global Mangrove Watch (GMW) Data
-arcpy.analysis.Intersect(['gmw_v3_2020_vec.shp',
-                          'TAHIRY_HONKO_MANAGEMENT_AREA.shp'], 
-                          "boa_mangroves.shp", "ALL") 
-print('Mangroves clipped successfully.')
+<pre class="(.python)"><code>    # Term Concept 2.1 - Using Intersect to extract mangroves in AOI 
+    from Global Mangrove Watch (GMW) Data
+    arcpy.analysis.Intersect(['gmw_v3_2020_vec.shp',   
+    'TAHIRY_HONKO_MANAGEMENT_AREA.shp'], 
+    "boa_mangroves.shp", "ALL") 
+    print('Mangroves clipped successfully.')
 
-# Creating the 25 meter buffer for mangroves
-boa_buffer = arcpy.analysis.Buffer(in_features='boa_mangroves.shp',     
-                                  out_feature_class='boa_buffer.shp', 
-                                  buffer_distance_or_field='25 meters',   
-                                  dissolve_option="ALL")
-print('Buffer created successfully.')
+    # Term Concept 2.2 - Creating the 25 meter buffer for mangroves
+    boa_buffer = arcpy.analysis.Buffer(in_features='boa_mangroves.shp',
+    out_feature_class='boa_buffer.shp', 
+    buffer_distance_or_field='25 meters', dissolve_option="ALL")
+    print('Buffer created successfully.')
 
-# Calculating Total Area of Mangroves
-mangrove_areas = list() #Creating an empty list to store output of Search Cursor
-
-with arcpy.da.SearchCursor("boa_mangroves.shp", ["Shape_Area"]) as cursor:
-  for row in cursor:
-      mangrove_areas.append(row[0]) #adding results from Shape_Area into list
-total_area = sum(mangrove_areas) * 100 #converting area from Square Km to ha
-print("Total Mangrove Area (ha):",total_area,"ha")
-del cursor
-del row</code></pre>
+    #Term Concept 3 - Calculating Total Area of Mangroves
+    mangrove_areas = list() #Creating an empty list to store output of Search 
+    Cursor
+    with arcpy.da.SearchCursor("boa_mangroves.shp", ["Shape_Area"]) as cursor:
+        for row in cursor:
+            mangrove_areas.append(row[0]) #adding results from Shape_Area into 
+            list
+    total_area = sum(mangrove_areas) * 100 #converting area from Square Km to ha
+    print("Total Mangrove Area (ha):",total_area,"ha")
+    del cursor
+    del row</code></pre>
+<p>(Assuming <em>nir</em> and <em>red</em> are numpy arrays)</p>
 </div>
 </div>
 </div>
@@ -292,13 +295,13 @@ This assignment expanded my interest in species conservation by showing me how s
 <section id="lidar-data-processing-from-basics-to-tree-segmentation" class="level3">
 <h3 class="anchored" data-anchor-id="lidar-data-processing-from-basics-to-tree-segmentation"><strong>LiDAR Data Processing: From Basics to Tree Segmentation</strong></h3>
 <p>I first encountered LiDAR data during our graduate program orientation, where I was blown away by 3D visualizations created captured from a drone flight. This moment sparked my excitement to dive into the world of LiDAR and explore its potential in forestry.</p>
-<section id="task-1-getting-hands-on-with-lidar-basics" class="level4">
-<h4 class="anchored" data-anchor-id="task-1-getting-hands-on-with-lidar-basics"><strong>Task 1: Getting Hands-On with LiDAR Basics</strong></h4>
+<section id="assignment-1-getting-hands-on-with-lidar-basics" class="level4">
+<h4 class="anchored" data-anchor-id="assignment-1-getting-hands-on-with-lidar-basics"><strong>Assignment 1: Getting Hands-On with LiDAR Basics</strong></h4>
 <p>In this assignment, I learned how to process LiDAR data in R to create a Canopy Height Model (CHM), or as I like to call it, “tree height map.” The goal was to familiarize myself with handling .las files, working with multiple tiles, and extracting point clouds from specific forest plots. I generated digital elevation models (DEMs) and CHMs to visualize tree heights and analyzed plot-level metrics to describe vegetation structure. It was a great introduction to organizing data, normalizing point clouds, and creating useful forestry products.</p>
 <p>Results of CHMs</p>
 </section>
-<section id="task-2-individual-tree-segmentation" class="level4">
-<h4 class="anchored" data-anchor-id="task-2-individual-tree-segmentation"><strong>Task 2: Individual Tree Segmentation</strong></h4>
+<section id="assignment-2-diving-deeper-with-tree-segmentation" class="level4">
+<h4 class="anchored" data-anchor-id="assignment-2-diving-deeper-with-tree-segmentation"><strong>Assignment 2: Diving Deeper with Tree Segmentation</strong></h4>
 <p>The second assignment took me to the next level, where I worked with LiDAR data from the Malcolm Knapp Research Forest to identify individual trees. Using the <a href="https://r-lidar.github.io/lidRbook/">lidR</a> package in R, I compared algorithms for tree detection by analyzing point clouds and CHMs. I fine-tuned parameters to improve results and deepened my understanding of segmentation methods through practical questions.</p>
 <p>Segmented Trees 3D Visualizations</p>
 </section>
@@ -319,6 +322,43 @@ This assignment expanded my interest in species conservation by showing me how s
 <hr>
 </section>
 </section>
+<section id="modeling-forest-landscape-changes-with-markov-models" class="level3">
+<h3 class="anchored" data-anchor-id="modeling-forest-landscape-changes-with-markov-models">Modeling Forest Landscape Changes with Markov Models</h3>
+<p>As part of my Landscape Ecology course, I explored Markov models, a tool widely used in landscape ecology to predict future land cover changes based on past transitions. One of our labs focused on modeling landscape changes in the Pacific Northwestern forests using a Markov model. By analyzing Landsat imagery data from 1972, 1984, and 1991, we classified forest cover into different age classes and calculated transition probabilities for these classes over time. The Markov model was then used to:</p>
+<ul>
+<li><p>Project future forest composition under different management scenarios.</p></li>
+<li><p>Evaluate the impact of reduced harvesting rates on forest cover types.</p></li>
+<li><p>Assess the long-term sustainability of current forest management practices.</p></li>
+</ul>
+<p>One key aspect of this project involved simulating <strong>landscape changes over 1000 years</strong>, as seen in my figure below, to examine how forest cover proportions would stabilize under different harvesting scenarios.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/Markov_Model_plot.png" class="img-fluid figure-img" width="588"></p>
+<figcaption>Simulating Longterm Transition of Forest of different age classes</figcaption>
+</figure>
+</div>
+<section id="key-findings" class="level4">
+<h4 class="anchored" data-anchor-id="key-findings">Key Findings</h4>
+<ul>
+<li><p><strong>Longer timesteps improve accuracy</strong> – The <strong>1972–1984 projection</strong> was more reliable than <strong>1984–1991</strong>, likely due to the longer timeframe capturing more stable trends.</p></li>
+<li><p><strong>Harvest rates impact old-growth forests</strong> – Reducing harvest rates slowed forest loss and increased the proportion of mature forests over time.</p></li>
+<li><p><strong>Sustainability concerns</strong> – The <strong>1972–1984 harvesting rates led to a significant decline in old-growth forests</strong>, with their proportion falling below 20%, indicating unsustainable practices.</p></li>
+<li><p><strong>Steady-state conditions</strong> – Over time, the model projected that mature forests would <strong>stabilize above 30%</strong>, but this depended on continued reductions in harvest rates.</p></li>
+</ul>
+</section>
+<section id="reflection-1" class="level4">
+<h4 class="anchored" data-anchor-id="reflection-1">Reflection</h4>
+<p>This project reinforced the well-known quote: “All models are wrong, but some are useful.” The goal was not to produce perfectly accurate predictions but rather to explore how different management decisions influence long-term forest dynamics. By adjusting harvest rates and observing their effects, I could see how even small policy changes significantly alter the landscape over time. This experience served as an important reminder that models should not be taken at face value—they are simplifications of reality and should always be interpreted with caution. The real power of models lies in their ability to help explore scenarios, test assumptions, and guide better decision-making rather than provide absolute answers.</p>
+</section>
+<section id="skills-gained-4" class="level4">
+<h4 class="anchored" data-anchor-id="skills-gained-4">Skills Gained</h4>
+<ul>
+<li><p><strong>Markov modeling</strong> for landscape change analysis</p></li>
+<li><p><strong>Evaluating long-term impacts</strong> of forest management decisions</p></li>
+<li><p><strong>Interpreting model outputs</strong> while considering their limitations</p></li>
+</ul>
+</section>
+</section>
 <section id="exploring-urban-expansion-in-the-kitchener-waterloo-region-my-first-project" class="level3">
 <h3 class="anchored" data-anchor-id="exploring-urban-expansion-in-the-kitchener-waterloo-region-my-first-project"><strong>Exploring Urban Expansion in the Kitchener-Waterloo Region: My First Project</strong></h3>
 <p>Reflecting on this project always brings me back to the early days of my remote sensing journey. It was during my undergraduate years, when I first introduced to the field of geomatics, and intrigued by the idea of examining the world from a distance and without physical contact a.k.a “remote sensing”. This project marked the beginning of my journey in remote sensing and how satellite imagery can reveal changes in the world over time.</p>
@@ -330,12 +370,12 @@ This assignment expanded my interest in species conservation by showing me how s
 <h4 class="anchored" data-anchor-id="results"><strong>Results:</strong></h4>
 <p>SLIDER WITH TWO IMAGES</p>
 </section>
-<section id="reflection-1" class="level4">
-<h4 class="anchored" data-anchor-id="reflection-1"><strong>Reflection:</strong></h4>
+<section id="reflection-2" class="level4">
+<h4 class="anchored" data-anchor-id="reflection-2"><strong>Reflection:</strong></h4>
 <p>Looking at this project now, I can’t help but reflect on how much I’ve grown in the remote sensing field. At the time, I was just starting to understand the process, working with image classification but without any coding. Today, I’m able to tackle much more complex analyses and understand the underlying principles more deeply.</p>
 </section>
-<section id="skills-gained-4" class="level4">
-<h4 class="anchored" data-anchor-id="skills-gained-4"><strong>Skills Gained:</strong></h4>
+<section id="skills-gained-5" class="level4">
+<h4 class="anchored" data-anchor-id="skills-gained-5"><strong>Skills Gained:</strong></h4>
 <ul>
 <li><p>Image Classification</p></li>
 <li><p>Change Detection Analysis</p></li>
