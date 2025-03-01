@@ -8,7 +8,7 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - href: images/BTessema_Resume_E-Portfolio.pdf
+      - href: Resume_HTML.qmd
         text: Resume
       - href: content.qmd
         text: Geospatial Projects

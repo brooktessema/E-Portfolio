@@ -1,5 +1,5 @@
 ---
-title: "Resume"
+title: "Resume/CV"
 ---
 
 # Education
@@ -7,14 +7,10 @@ title: "Resume"
 -   Masters of Geomatics in Environmental Management (MGEM) August 2024 - Present
     -   University of British Columbia, Vancouver BC
     -   Capstone Project: Monitoring Mangrove Restoration in Madagascar Using Sentinel-2 imagery
-    
-    
-
 -   Bachelor of Environmental Studies (BES Honors) September 2017 - June 2021
     -   York University, Toronto ON
     -   Specialization: Urban and Regional Environment
     -   Capstone Project: Certificate in Geographic Information Systems (GIS) and Remote Sensing
-
 
 # Publications
 
