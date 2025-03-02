@@ -213,42 +213,6 @@ It’s incredible to see how quickly I progressed from a curious observer to som
 
 ------------------------------------------------------------------------
 
-### Modeling Forest Landscape Changes with Markov Models
-
-As part of my Landscape Ecology course, I explored Markov models, a tool widely used in landscape ecology to predict future land cover changes based on past transitions. One of our labs focused on modeling landscape changes in the Pacific Northwestern forests using a Markov model. By analyzing Landsat imagery data from 1972, 1984, and 1991, we classified forest cover into different age classes and calculated transition probabilities for these classes over time. The Markov model was then used to:
-
--   Project future forest composition under different management scenarios.
-
--   Evaluate the impact of reduced harvesting rates on forest cover types.
-
--   Assess the long-term sustainability of current forest management practices.
-
-One key aspect of this project involved simulating **landscape changes over 1000 years**, as seen in my figure below, to examine how forest cover proportions would stabilize under different harvesting scenarios.
-
-![Simulating Longterm Transition of Forest of different age classes](images/Markov_Model_plot.png){fig-align="center" width="588"}
-
-#### Key Findings
-
--   **Longer timesteps improve accuracy** – The **1972–1984 projection** was more reliable than **1984–1991**, likely due to the longer timeframe capturing more stable trends.
-
--   **Harvest rates impact old-growth forests** – Reducing harvest rates slowed forest loss and increased the proportion of mature forests over time.
-
--   **Sustainability concerns** – The **1972–1984 harvesting rates led to a significant decline in old-growth forests**, with their proportion falling below 20%, indicating unsustainable practices.
-
--   **Steady-state conditions** – Over time, the model projected that mature forests would **stabilize above 30%**, but this depended on continued reductions in harvest rates.
-
-#### Reflection
-
-This project reinforced the well-known quote: “All models are wrong, but some are useful.” The goal was not to produce perfectly accurate predictions but rather to explore how different management decisions influence long-term forest dynamics. By adjusting harvest rates and observing their effects, I could see how even small policy changes significantly alter the landscape over time. This experience served as an important reminder that models should not be taken at face value—they are simplifications of reality and should always be interpreted with caution. The real power of models lies in their ability to help explore scenarios, test assumptions, and guide better decision-making rather than provide absolute answers.
-
-#### Skills Gained
-
--   **Markov modeling** for landscape change analysis
-
--   **Evaluating long-term impacts** of forest management decisions
-
--   **Interpreting model outputs** while considering their limitations
-
 ### **Exploring Urban Expansion in the Kitchener-Waterloo Region: My First Project**
 
 Reflecting on this project always brings me back to the early days of my remote sensing journey. It was during my undergraduate years, when I first introduced to the field of geomatics, and intrigued by the idea of examining the world from a distance and without physical contact a.k.a "remote sensing". This project marked the beginning of my journey in remote sensing and how satellite imagery can reveal changes in the world over time.
