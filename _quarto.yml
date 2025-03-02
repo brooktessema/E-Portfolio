@@ -11,11 +11,8 @@ website:
       - href: "images/BTessema_Resume_E-Portfolio.pdf"
         text: Resume
       - href: content.qmd
-        text: Geospatial Projects
-      - href: career.qmd
-        text: Career Highlights
-        menu:
-          - resume.qmd
+        text: Geospatial Projects      
+        
         
 
 format:

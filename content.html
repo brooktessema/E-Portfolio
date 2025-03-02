@@ -93,16 +93,12 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./Resume_HTML.html"> 
+    <a class="nav-link" href="./images/BTessema_Resume_E-Portfolio.pdf"> 
 <span class="menu-text">Resume</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link active" href="./content.html" aria-current="page"> 
 <span class="menu-text">Geospatial Projects</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./career.html"> 
-<span class="menu-text">Career Highlights</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -126,10 +122,6 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#lidar-data-processing-from-basics-to-tree-segmentation" id="toc-lidar-data-processing-from-basics-to-tree-segmentation" class="nav-link" data-scroll-target="#lidar-data-processing-from-basics-to-tree-segmentation"><strong>LiDAR Data Processing: From Basics to Tree Segmentation</strong></a></li>
   <li><a href="#modeling-forest-landscape-changes-with-markov-models" id="toc-modeling-forest-landscape-changes-with-markov-models" class="nav-link" data-scroll-target="#modeling-forest-landscape-changes-with-markov-models"><strong>Modeling Forest Landscape Changes with Markov Models</strong></a></li>
   <li><a href="#exploring-urban-expansion-in-the-kitchener-waterloo-region-my-first-project" id="toc-exploring-urban-expansion-in-the-kitchener-waterloo-region-my-first-project" class="nav-link" data-scroll-target="#exploring-urban-expansion-in-the-kitchener-waterloo-region-my-first-project"><strong>Exploring Urban Expansion in the Kitchener-Waterloo Region: My First Project</strong></a></li>
-  <li><a href="#code-snippets" id="toc-code-snippets" class="nav-link" data-scroll-target="#code-snippets">Code Snippets</a></li>
-  <li><a href="#external-links" id="toc-external-links" class="nav-link" data-scroll-target="#external-links">External links</a></li>
-  <li><a href="#external-links-1" id="toc-external-links-1" class="nav-link" data-scroll-target="#external-links-1">External links</a></li>
-  <li><a href="#external-links-2" id="toc-external-links-2" class="nav-link" data-scroll-target="#external-links-2">External links</a></li>
   </ul>
 </nav>
     </div>
@@ -381,62 +373,9 @@ This assignment expanded my interest in species conservation by showing me how s
 <li><p>Geo-spatial Analysis</p></li>
 <li><p>Report Writing</p></li>
 </ul>
-</section>
-</section>
-<section id="code-snippets" class="level2">
-<h2 class="anchored" data-anchor-id="code-snippets">Code Snippets</h2>
-<p>Sample code snippet. Notice that you can provide a toggle to switch between coding languages - this is referred to as a ‘tabset’ in quarto. It is good practice to try and convert your R code to python, and vice-versa to demonstrate coding proficiency. For example, let’s showcase a function for calculating NDVI in R and Python.</p>
-<div class="tabset-margin-container"></div><div class="panel-tabset" data-group="language">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true">R</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false">Python</a></li></ul>
-<div class="tab-content" data-group="language">
-<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
-<pre class="(.r)"><code>calc_ndvi &lt;- function(nir, red){
-  ndvi &lt;- (nir-red)/(nir+red)
-  return(ndvi)
-}</code></pre>
-<p>(Assuming <em>nir</em> and <em>red</em> are terra rast objects)</p>
-</div>
-<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
-<pre class="(.python)"><code>def calc_ndvi(nir, red): 
-  ndvi = (nir - red)/(nir + red)
-  return(ndvi)</code></pre>
-<p>(Assuming <em>nir</em> and <em>red</em> are numpy arrays)</p>
-</div>
-</div>
-</div>
-<hr>
-<hr>
-</section>
-<section id="external-links" class="level2">
-<h2 class="anchored" data-anchor-id="external-links">External links</h2>
-<p>You can also provide a frame linking to external websites. For example, here is a Google Earth Engine application I developed - which I embedded in this webpage using the code below:</p>
-<div class="cell">
-<pre class="code cell-code"><code>
-&lt;iframe width="900" height="700"
-src="https://ee-melserramon.projects.earthengine.app/view/thermal-analysis-tool"&gt;
-&lt;/iframe&gt;</code></pre>
-</div>
-<p>The full-screen GEE application is available <a href="https://ee-melserramon.projects.earthengine.app/view/thermal-analysis-tool">here</a> in case you’re interested.</p>
-<p>(To use the GEE tool, navigate to any city you’d like, hit apply filters, and click anywhere on the map to retrieve a time-series of Landsat surface temperature observations for that point. Areas where the maximum temp exceeded 35 degrees Celsius in your date-range are highlighted in red.)</p>
-<iframe width="800" height="700" src="https://ee-melserramon.projects.earthengine.app/view/thermal-analysis-tool"></iframe>
-</section>
-<section id="external-links-1" class="level2">
-<h2 class="anchored" data-anchor-id="external-links-1">External links</h2>
-<p>You can also provide a frame linking to external websites. For example, here is a Google Earth Engine application I developed - which I embedded in this webpage using the code below:</p>
-<p><code>{code}  &lt;iframe width="900" height="700" src="https://ee-melserramon.projects.earthengine.app/view/thermal-analysis-tool"&gt; &lt;/iframe&gt;}</code></p>
-<p>The full-screen GEE application is available <a href="https://ee-melserramon.projects.earthengine.app/view/thermal-analysis-tool">here</a> in case you’re interested.</p>
-<p>(To use the GEE tool, navigate to any city you’d like, hit apply filters, and click anywhere on the map to retrieve a time-series of Landsat surface temperature observations for that point. Areas where the maximum temp exceeded 35 degrees Celsius in your date-range are highlighted in red.)</p>
-<iframe width="900" height="700" src="https://ee-melserramon.projects.earthengine.app/view/thermal-analysis-tool"></iframe>
-</section>
-<section id="external-links-2" class="level2">
-<h2 class="anchored" data-anchor-id="external-links-2">External links</h2>
-<p>You can also provide a frame linking to external websites. For example, here is a Google Earth Engine application I developed - which I embedded in this webpage using the code below:</p>
-<p><code>{code}  &lt;iframe width="900" height="700" src="https://ee-melserramon.projects.earthengine.app/view/thermal-analysis-tool"&gt; &lt;/iframe&gt;}</code></p>
-<p>The full-screen GEE application is available <a href="https://ee-melserramon.projects.earthengine.app/view/thermal-analysis-tool">here</a> in case you’re interested.</p>
-<p>(To use the GEE tool, navigate to any city you’d like, hit apply filters, and click anywhere on the map to retrieve a time-series of Landsat surface temperature observations for that point. Areas where the maximum temp exceeded 35 degrees Celsius in your date-range are highlighted in red.)</p>
-<iframe width="900" height="700" src="https://ee-melserramon.projects.earthengine.app/view/thermal-analysis-tool"></iframe>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
