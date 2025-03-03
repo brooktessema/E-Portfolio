@@ -4,7 +4,7 @@ format: html
 editor: visual
 ---
 
-## **Welcome to my Remote Sensing Projects page!**
+**Welcome to my Remote Sensing Projects page!**
 
 In this section, you’ll find a collection of my remote sensing projects that reflect my journey from exploring geospatial data as an undergraduate to tackling advanced projects using programming languages R and Python. Remote Sensing is an essential tool for environmental management as it offers powerful tools to map, monitor, and manage Earth's ecosystems.
 
@@ -34,7 +34,7 @@ My full report will be available here once the project ends, but I've summarized
 
 #### **Key Results:**
 
-####  ![Map of Mangroves in Bay of Assassins from 2019-2024 showing changes in area overtime.](images/Layout.jpg){width="870"}
+#### ![Map of Mangroves in Bay of Assassins from 2019-2024 showing changes in area overtime.](images/Layout.jpg){width="870"}
 
 #### **Reflection:**
 
@@ -100,9 +100,9 @@ For this project, I used Landsat images from 1990 to 2020 to visualize and quant
 
 #### **Results:**
 
-|  |  |
-|----|----|
-|                      ![](images/before.jpg){width="453"} | ![](images/after.jpg){width="448"} |
+|                                     |                                    |
+|-------------------------------------|------------------------------------|
+| ![](images/before.jpg){width="453"} | ![](images/after.jpg){width="448"} |
 
 #### **Reflection:**
 
