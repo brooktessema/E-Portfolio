@@ -11,7 +11,7 @@ about:
       href: https://www.linkedin.com/in/brook-tessema-558a6619a/
     - icon: github
       text: GitHub
-      href: https://github.com/ramonmelser
+      href: https://github.com/brooktessema
     - icon: envelope-at
       text: Email
       href: btessema92@gmail.com
