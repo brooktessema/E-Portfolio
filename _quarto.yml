@@ -10,11 +10,20 @@ website:
         text: Home
       - href: "images/BTessema_Resume_E-Portfolio.pdf"
         text: Resume
-      - href: content.qmd
-        text: Geospatial Projects      
+      - text: MGEM Projects
+        menu:
+          - href: content.qmd
+            text: Geospatial Analysis
+          - href: remote_sensing.qmd
+            text: Remote Sensing
+          - href: writing_research.qmd
+            text: Writing & Research
+      - href: capstone_project.qmd
+        text: Capstone Project 
+      - href: career.qmd
+        text: Career Highlights      
+      
         
-        
-
 format:
   html:
     theme: zephyr
@@ -22,5 +31,4 @@ format:
     toc: true
 
 editor: visual
-
 

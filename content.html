@@ -96,9 +96,32 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link" href="./images/BTessema_Resume_E-Portfolio.pdf"> 
 <span class="menu-text">Resume</span></a>
   </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-mgem-projects" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">MGEM Projects</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-mgem-projects">    
+        <li>
+    <a class="dropdown-item" href="./content.html">
+ <span class="dropdown-text">Geospatial Analysis</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./remote_sensing.html">
+ <span class="dropdown-text">Remote Sensing</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./writing_research.html">
+ <span class="dropdown-text">Writing &amp; Research</span></a>
+  </li>  
+    </ul>
+  </li>
   <li class="nav-item">
-    <a class="nav-link active" href="./content.html" aria-current="page"> 
-<span class="menu-text">Geospatial Projects</span></a>
+    <a class="nav-link" href="./capstone_project.html"> 
+<span class="menu-text">Capstone Project</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./career.html"> 
+<span class="menu-text">Career Highlights</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -118,7 +141,7 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#monitoring-mangrove-restoration-using-sentinel---2-imagery" id="toc-monitoring-mangrove-restoration-using-sentinel---2-imagery" class="nav-link active" data-scroll-target="#monitoring-mangrove-restoration-using-sentinel---2-imagery"><strong>Monitoring Mangrove Restoration Using Sentinel - 2 Imagery</strong></a></li>
   <li><a href="#using-python-for-geo-spatial-analysis" id="toc-using-python-for-geo-spatial-analysis" class="nav-link" data-scroll-target="#using-python-for-geo-spatial-analysis"><strong>Using Python for Geo-spatial Analysis</strong></a></li>
-  <li><a href="#investigating-species-movement-corridors" id="toc-investigating-species-movement-corridors" class="nav-link" data-scroll-target="#investigating-species-movement-corridors"><strong>Investigating Species Movement Corridors</strong></a></li>
+  <li><a href="#investigating-movement-corridors-for-grizzly-bears-in-alberta" id="toc-investigating-movement-corridors-for-grizzly-bears-in-alberta" class="nav-link" data-scroll-target="#investigating-movement-corridors-for-grizzly-bears-in-alberta"><strong>Investigating Movement Corridors for Grizzly Bears in Alberta</strong></a></li>
   <li><a href="#lidar-data-processing-from-basics-to-tree-segmentation" id="toc-lidar-data-processing-from-basics-to-tree-segmentation" class="nav-link" data-scroll-target="#lidar-data-processing-from-basics-to-tree-segmentation"><strong>LiDAR Data Processing: From Basics to Tree Segmentation</strong></a></li>
   <li><a href="#modeling-forest-landscape-changes-with-markov-models" id="toc-modeling-forest-landscape-changes-with-markov-models" class="nav-link" data-scroll-target="#modeling-forest-landscape-changes-with-markov-models"><strong>Modeling Forest Landscape Changes with Markov Models</strong></a></li>
   <li><a href="#exploring-urban-expansion-in-the-kitchener-waterloo-region-my-first-project" id="toc-exploring-urban-expansion-in-the-kitchener-waterloo-region-my-first-project" class="nav-link" data-scroll-target="#exploring-urban-expansion-in-the-kitchener-waterloo-region-my-first-project"><strong>Exploring Urban Expansion in the Kitchener-Waterloo Region: My First Project</strong></a></li>
@@ -154,8 +177,7 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="anchored" data-anchor-id="monitoring-mangrove-restoration-using-sentinel---2-imagery"><strong>Monitoring Mangrove Restoration Using Sentinel - 2 Imagery</strong></h3>
 <p>As the capstone project of my Master’s program in Geomatics for Environmental Management, this project is a significant culmination of my academic journey. For my project, I collaborated with <strong>Blue Ventures</strong>, a marine conservation organization focused on coastal ecosystem restoration (<a href="https://blueventures.org/what-we-do/">learn more about Blue Ventures</a>). I aimed to monitor mangrove restoration efforts in the Bay of Assassins, Madagascar. Using Sentinel-2 satellite imagery, the project evaluates changes in mangrove forest area and health from 2019 to 2024, supporting Blue Ventures’ mission to protect and restore mangroves in the region.</p>
 <p>My study investigates the question: <strong>To what extent can Sentinel-2 imagery detect changes in mangrove forest area and health at restoration sites in Madagascar?“</strong> I answer this by quantifying mangrove vegetation changes, identify areas of growth and loss, and assess vegetation health.</p>
-<section id="methods-tools" class="level4">
-<h4 class="anchored" data-anchor-id="methods-tools"><strong>Methods &amp; Tools</strong></h4>
+<p><strong>Methods &amp; Tools:</strong></p>
 <ul>
 <li><p><strong>Data</strong>: Sentinel-2 satellite imagery (2019–2024).</p></li>
 <li><p><strong>Tool</strong>: Google Earth Engine (GEM v2) for time-series analysis.</p></li>
@@ -167,11 +189,9 @@ ul.task-list li input[type="checkbox"] {
 </ul></li>
 </ul>
 <p>This research is particularly important because mangrove ecosystems play a vital role in coastal protection, carbon sequestration, and supporting biodiversity. You can read my full report here but I’ve summarized and visualized some of my results below.</p>
-<p><strong>Classification Outputs (2019-2024)</strong><br>
+<p><strong>Classification Outputs (2019-2024):</strong><br>
 This visualization shows the changes in mangrove forest extent and vegetation health over the past five years, highlighting areas of growth, loss, and overall restoration progress in the Bay of Assassins, Madagascar.</p>
-</section>
-<section id="skills-gained" class="level4">
-<h4 class="anchored" data-anchor-id="skills-gained"><strong>Skills Gained:</strong></h4>
+<p><strong>Skills Gained:</strong></p>
 <ul>
 <li><p>Satellite Imagery Analysis (Sentinel-2)</p></li>
 <li><p>Time-Series Analysis (Google Earth Engine)</p></li>
@@ -182,12 +202,11 @@ This visualization shows the changes in mangrove forest extent and vegetation he
 </ul>
 <hr>
 </section>
-</section>
 <section id="using-python-for-geo-spatial-analysis" class="level3">
 <h3 class="anchored" data-anchor-id="using-python-for-geo-spatial-analysis"><strong>Using Python for Geo-spatial Analysis</strong></h3>
-<p>For this project, I applied three geo-processing techniques, intersect, buffer, and area calculation, to my capstone research on mangrove ecosystems. Using Python, I intersected my study area with the Global Mangrove Watch dataset, applied a 25-meter buffer to the mangroves, and calculated their total area. I also automated data acquisition by scripting a download process for the datasets.</p>
+<p>For this project, I applied three geo-processing techniques, intersect, buffer, and area calculation, to my capstone research on mangrove ecosystems. Using Python, I intersected my study area with the Global Mangrove Watch data set, applied a 25-meter buffer to the mangroves, and calculated their total area. I also automated data acquisition by scripting a download process for the datasets.</p>
 <p><strong>Methods with Code Snippets:</strong></p>
-<p>The first steps was to download the Global Mangrove Watch dataset. The code snippet below shows the automated downloading and extraction of Global Mangrove Watch data.</p>
+<p>The first steps was to download data friom the Global Mangrove Watch online database. Next came Click on the headings below to see my code the automated downloading and extraction of Global Mangrove Watch data.</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset" data-group="language">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">Automated Downloading of Mangrove Data</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Geo-Processing Steps</a></li></ul>
 <div class="tab-content" data-group="language">
@@ -243,8 +262,7 @@ del row</code></pre>
 </div>
 <p><strong>Reflection:</strong><br>
 I really enjoyed the opportunity to apply my Python skills beyond the classroom and directly to my research. Writing my own code to process geo-spatial data, instead of pre-defined tools, was both challenging and rewarding. What made this project even more exciting was automating the workflow by scripting data set downloads. This experience reinforced how powerful Python can be in geo-spatial analysis and gave me confidence in integrating coding into my research more effectively.</p>
-<section id="skills-gained-1" class="level4">
-<h4 class="anchored" data-anchor-id="skills-gained-1"><strong>Skills Gained:</strong></h4>
+<p><strong>Skills Gained:</strong></p>
 <ul>
 <li><p>Vector Geoprocessing (Intersection &amp; Buffering)</p></li>
 <li><p>Search Cursors for Data Extraction</p></li>
@@ -254,25 +272,20 @@ I really enjoyed the opportunity to apply my Python skills beyond the classroom 
 </ul>
 <hr>
 </section>
-</section>
-<section id="investigating-species-movement-corridors" class="level3">
-<h3 class="anchored" data-anchor-id="investigating-species-movement-corridors"><strong>Investigating Species Movement Corridors</strong></h3>
-<p><strong>Overview:</strong><br>
-For this assignment, I performed a Least Cost Path analysis in ArcGIS Pro to evaluate optimal routes between a source and target location, considering environmental factors like terrain, land cover, and roads. The goal was to determine the most efficient path by calculating a cost raster, which incorporates various factors that influence movement, such as slope and proximity to roads.</p>
-<p><strong>Methods &amp; Tools:</strong><br>
-Using ArcGIS Pro, I created a cost raster incorporating factors like terrain slope, land cover, and proximity to roads. I then performed the Least Cost Path analysis to identify the most efficient route between the source and target locations.</p>
+<section id="investigating-movement-corridors-for-grizzly-bears-in-alberta" class="level3">
+<h3 class="anchored" data-anchor-id="investigating-movement-corridors-for-grizzly-bears-in-alberta"><strong>Investigating Movement Corridors for Grizzly Bears in Alberta</strong></h3>
+<p>For this assignment, I performed a <strong>Least Cost Path</strong> analysis in ArcGIS Pro to evaluate optimal routes between a source and target location, considering environmental factors like terrain, land cover, and roads. The goal was to determine the most efficient path for a grizzly bear when travelling through a landscape. I did this by calculating a cost raster, which incorporates the obstacles associated with moving through an area, such as uneven slopes, proximity to roads, and changing land cover.</p>
 <p><strong>Key Results:</strong><br>
-The analysis provided the optimal route based on minimized movement costs and highlighted the impact of terrain and land cover on accessibility.</p>
+The analysis provided the optimal route based on minimized movement costs and highlighted the impact of terrain and land cover on accessibility in a habitat.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/BT_GEM-510_Least_Cost_Map conv 1.png" class="img-fluid figure-img" style="width:15cm"></p>
+<p><img src="images/BT_GEM-510_Least_Cost_Map conv 1.png" class="img-fluid figure-img" style="width:13.8cm"></p>
 <figcaption>Least Cost Map of Grizzly Bears Habitat</figcaption>
 </figure>
 </div>
 <p><strong>Reflection:</strong><br>
-This assignment expanded my interest in species conservation by showing me how spatial analysis can help identify the dynamics of movement corridors and the impacts of habitat fragmentation. It emphasized the complexity of factors influencing species movement and habitat selection.</p>
-<section id="skills-gained-2" class="level4">
-<h4 class="anchored" data-anchor-id="skills-gained-2"><strong>Skills Gained:</strong></h4>
+This assignment deepened my interest in species conservation by giving me a glimpse into how conservationists study the impacts of human development on endangered species. Through spatial analysis, I saw firsthand how movement corridors are shaped by habitat fragmentation and how crucial it is to consider these dynamics when planning development. Mapping least-cost paths made me feel like a conservationist myself, applying real-world methods to assess connectivity and identify risks to wildlife. It reinforced my appreciation for this type of work and made me envision the possibility of contributing to similar studies in the future.</p>
+<p><strong>Skills Gained:</strong></p>
 <ul>
 <li><p>Least Cost Path Analysis (ArcGIS Pro)</p></li>
 <li><p>Cost Raster Creation (Terrain, Land Cover, Roads)</p></li>
@@ -280,7 +293,6 @@ This assignment expanded my interest in species conservation by showing me how s
 <li><p>Impact of Habitat Fragmentation on Species Movement</p></li>
 </ul>
 <hr>
-</section>
 </section>
 <section id="lidar-data-processing-from-basics-to-tree-segmentation" class="level3">
 <h3 class="anchored" data-anchor-id="lidar-data-processing-from-basics-to-tree-segmentation"><strong>LiDAR Data Processing: From Basics to Tree Segmentation</strong></h3>
@@ -299,8 +311,8 @@ This assignment expanded my interest in species conservation by showing me how s
 <h4 class="anchored" data-anchor-id="reflection"><strong>Reflection:</strong></h4>
 <p>It’s incredible to see how quickly I progressed from a curious observer to someone who can process and segment LiDAR data with confidence. Each step, from mapping terrain to identifying individual trees, has expanded my understanding of LiDAR’s potential in forestry. I’m excited to continue exploring this technology’s applications in environmental monitoring.</p>
 </section>
-<section id="skills-gained-3" class="level4">
-<h4 class="anchored" data-anchor-id="skills-gained-3"><strong>Skills Gained:</strong></h4>
+<section id="skills-gained" class="level4">
+<h4 class="anchored" data-anchor-id="skills-gained"><strong>Skills Gained:</strong></h4>
 <ul>
 <li><p>LiDAR Data Processing</p></li>
 <li><p>Canopy Height Model (CHM) Creation</p></li>
@@ -335,17 +347,13 @@ This assignment expanded my interest in species conservation by showing me how s
 <li><p><strong>Sustainability concerns</strong> – The <strong>1972–1984 harvesting rates led to a significant decline in old-growth forests</strong>, with their proportion falling below 20%, indicating unsustainable practices.</p></li>
 <li><p><strong>Steady-state conditions</strong> – Over time, the model projected that mature forests would <strong>stabilize above 30%</strong>, but this depended on continued reductions in harvest rates.</p></li>
 </ul>
-</section>
-<section id="reflection-1" class="level4">
-<h4 class="anchored" data-anchor-id="reflection-1">Reflection</h4>
+<p><strong>Reflection:</strong></p>
 <p>This project reinforced the well-known quote: “All models are wrong, but some are useful.” The goal was not to produce perfectly accurate predictions but rather to explore how different management decisions influence long-term forest dynamics. By adjusting harvest rates and observing their effects, I could see how even small policy changes significantly alter the landscape over time. This experience served as an important reminder that models should not be taken at face value—they are simplifications of reality and should always be interpreted with caution. The real power of models lies in their ability to help explore scenarios, test assumptions, and guide better decision-making rather than provide absolute answers.</p>
-</section>
-<section id="skills-gained-4" class="level4">
-<h4 class="anchored" data-anchor-id="skills-gained-4">Skills Gained</h4>
+<p><strong>Skills Gained:</strong></p>
 <ul>
-<li><p><strong>Markov modeling</strong> for landscape change analysis</p></li>
-<li><p><strong>Evaluating long-term impacts</strong> of forest management decisions</p></li>
-<li><p><strong>Interpreting model outputs</strong> while considering their limitations</p></li>
+<li><p>Markov modeling</p></li>
+<li><p>Impact Evaluation</p></li>
+<li><p>Interpreting model outputs</p></li>
 </ul>
 <hr>
 </section>
@@ -361,12 +369,12 @@ This assignment expanded my interest in species conservation by showing me how s
 <h4 class="anchored" data-anchor-id="results"><strong>Results:</strong></h4>
 <p>SLIDER WITH TWO IMAGES</p>
 </section>
-<section id="reflection-2" class="level4">
-<h4 class="anchored" data-anchor-id="reflection-2"><strong>Reflection:</strong></h4>
+<section id="reflection-1" class="level4">
+<h4 class="anchored" data-anchor-id="reflection-1"><strong>Reflection:</strong></h4>
 <p>Looking at this project now, I can’t help but reflect on how much I’ve grown in the remote sensing field. At the time, I was just starting to understand the process, working with image classification but without any coding. Today, I’m able to tackle much more complex analyses and understand the underlying principles more deeply.</p>
 </section>
-<section id="skills-gained-5" class="level4">
-<h4 class="anchored" data-anchor-id="skills-gained-5"><strong>Skills Gained:</strong></h4>
+<section id="skills-gained-1" class="level4">
+<h4 class="anchored" data-anchor-id="skills-gained-1"><strong>Skills Gained:</strong></h4>
 <ul>
 <li><p>Image Classification</p></li>
 <li><p>Change Detection Analysis</p></li>

@@ -12,15 +12,15 @@ Here, you'll find a collection of my work, showcasing my journey from the humble
 
 ### **Monitoring Mangrove Restoration Using Sentinel - 2 Imagery**
 
-As the capstone project of my Master's program in Geomatics for Environmental Management, this project is a significant culmination of my academic journey. For my project, I collaborated with **Blue Ventures**, a marine conservation organization focused on coastal ecosystem restoration ([learn more about Blue Ventures](https://blueventures.org/what-we-do/)). I aimed to monitor mangrove restoration efforts in the Bay of Assassins, Madagascar. Using Sentinel-2 satellite imagery, the project evaluates changes in mangrove forest area and health from 2019 to 2024, supporting Blue Ventures’ mission to protect and restore mangroves in the region.
+As the capstone project of my Master's program in Geomatics for Environmental Management (MGEM), this project is a significant culmination of my academic journey. For my project, I collaborated with [**Blue Ventures**](https://blueventures.org/what-we-do/), a marine conservation organization focused on coastal ecosystem restoration, to study their mangrove restoration efforts in the Bay of Assassins, Madagascar. Using Sentinel-2 satellite imagery and [**GEM**](https://blueventures.org/what-we-do/climate-solutions/blue-forests/gem/), a Google Earth Engine based tool, I mapped mangrove forests from 2019 to 2024, measuring changes in forest area and vegetation health.
 
-My study investigates the question: **To what extent can Sentinel-2 imagery detect changes in mangrove forest area and health at restoration sites in Madagascar?"** I answer this by quantifying mangrove vegetation changes, identify areas of growth and loss, and assess vegetation health.
+My study investigates the question: **To what extent can Sentinel-2 imagery detect changes in mangrove forest area and health at restoration sites in Madagascar?** I answer this by quantifying mangrove vegetation changes, identifying areas of growth and loss, and assess vegetation health overtime. The focus on mangroves in restoration areas supports Blue Ventures’ mission to protect and restore mangroves in the region.
 
-#### **Methods & Tools**
+**Methods & Tools:**
 
--   **Data**: Sentinel-2 satellite imagery (2019–2024).
+-   **Data**: Sentinel-2 satellite imagery (2019–2024), Mangrove Restoration sites in Madagascar
 
--   **Tool**: Google Earth Engine (GEM v2) for time-series analysis.
+-   **Tools**: Google Earth Engine (GEM v2) for time-series analysis, QGIS & ArcGIS Pro for mapping and visualizations
 
 -   **Analysis**:
 
@@ -28,28 +28,18 @@ My study investigates the question: **To what extent can Sentinel-2 imagery dete
 
     -   Identify areas of significant growth and loss.
 
-    -   Assess vegetation health using spectral indices (NDVI, EVI).
+    -   Assess vegetation health using spectral indices (NDVI,).
 
-This research is particularly important because mangrove ecosystems play a vital role in coastal protection, carbon sequestration, and supporting biodiversity. You can read my full report here but I've summarized and visualized some of my results below.
+My full report will be available here once the project ends, but I've summarized and visualized some of my results below.
 
-**Classification Outputs (2019-2024)**\
-This visualization shows the changes in mangrove forest extent and vegetation health over the past five years, highlighting areas of growth, loss, and overall restoration progress in the Bay of Assassins, Madagascar.
+**Classification Outputs:**\
+![Map of Mangroves in Bay of Assassins from 2019-2024 showing changes in area overtime.](images/Classification Map Output 1.png){width="725"}
 
-```{r leaflet, include = FALSE}
-library(dplyr); library(leaflet)
+**Reflection:**
 
-m <- leaflet() %>%
-  addProviderTiles("Esri.WorldImagery") %>%
-  addScaleBar(position = c("bottomleft")) %>%
-  setView(-123.1207, 49.2827, zoom = 11)
+This research is particularly important because mangrove ecosystems play a vital role in coastal protection, carbon sequestration, and supporting biodiversity. I was excited by the opportunity of this project in supporting real world coutcomes which include Blue Ventures’ mission to protect and restore mangroves in the region.
 
-```
-
-```{r map, echo=FALSE}
-
-```
-
-#### **Skills Gained:**
+**Skills Gained:**
 
 -   Satellite Imagery Analysis (Sentinel-2)
 
@@ -57,7 +47,7 @@ m <- leaflet() %>%
 
 -   Mangrove Vegetation Change Detection
 
--   Vegetation Health Assessment (NDVI, EVI)
+-   Vegetation Health Assessment (NDVI)
 
 -   Data Classification and Visualization
 
@@ -67,11 +57,11 @@ m <- leaflet() %>%
 
 ### **Using Python for Geo-spatial Analysis**
 
-For this project, I applied three geo-processing techniques, intersect, buffer, and area calculation, to my capstone research on mangrove ecosystems. Using Python, I intersected my study area with the Global Mangrove Watch dataset, applied a 25-meter buffer to the mangroves, and calculated their total area. I also automated data acquisition by scripting a download process for the datasets.
+For this project, I applied three geo-processing techniques, intersect, buffer, and area calculation, to my capstone research on mangrove ecosystems. Using Python, I intersected my study area with the Global Mangrove Watch data set, applied a 25-meter buffer to the mangroves, and calculated their total area. I also automated data acquisition by scripting a download process for the datasets.
 
 **Methods with Code Snippets:**
 
-The first steps was to download the Global Mangrove Watch dataset. The code snippet below shows the automated downloading and extraction of Global Mangrove Watch data.
+The first steps was to download data friom the Global Mangrove Watch online database. Next came Click on the headings below to see my code the automated downloading and extraction of Global Mangrove Watch data.
 
 ::: {.panel-tabset group="language"}
 ## Automated Downloading of Mangrove Data
@@ -132,7 +122,7 @@ del row
 **Reflection:**\
 I really enjoyed the opportunity to apply my Python skills beyond the classroom and directly to my research. Writing my own code to process geo-spatial data, instead of pre-defined tools, was both challenging and rewarding. What made this project even more exciting was automating the workflow by scripting data set downloads. This experience reinforced how powerful Python can be in geo-spatial analysis and gave me confidence in integrating coding into my research more effectively.
 
-#### **Skills Gained:**
+**Skills Gained:**
 
 -   Vector Geoprocessing (Intersection & Buffering)
 
@@ -146,23 +136,19 @@ I really enjoyed the opportunity to apply my Python skills beyond the classroom 
 
 ------------------------------------------------------------------------
 
-### **Investigating Species Movement Corridors**
+### **Investigating Movement Corridors for Grizzly Bears in Alberta**
 
-**Overview:**\
-For this assignment, I performed a Least Cost Path analysis in ArcGIS Pro to evaluate optimal routes between a source and target location, considering environmental factors like terrain, land cover, and roads. The goal was to determine the most efficient path by calculating a cost raster, which incorporates various factors that influence movement, such as slope and proximity to roads.
-
-**Methods & Tools:**\
-Using ArcGIS Pro, I created a cost raster incorporating factors like terrain slope, land cover, and proximity to roads. I then performed the Least Cost Path analysis to identify the most efficient route between the source and target locations.
+For this assignment, I performed a **Least Cost Path** analysis in ArcGIS Pro to evaluate optimal routes between a source and target location, considering environmental factors like terrain, land cover, and roads. The goal was to determine the most efficient path for a grizzly bear when travelling through a landscape. I did this by calculating a cost raster, which incorporates the obstacles associated with moving through an area, such as uneven slopes, proximity to roads, and changing land cover.
 
 **Key Results:**\
-The analysis provided the optimal route based on minimized movement costs and highlighted the impact of terrain and land cover on accessibility.
+The analysis provided the optimal route based on minimized movement costs and highlighted the impact of terrain and land cover on accessibility in a habitat.
 
-![Least Cost Map of Grizzly Bears Habitat](images/BT_GEM-510_Least_Cost_Map%20conv%201.png){fig-align="center" width="15cm"}
+![Least Cost Map of Grizzly Bears Habitat](images/BT_GEM-510_Least_Cost_Map%20conv%201.png){fig-align="center" width="13.8cm"}
 
 **Reflection:**\
-This assignment expanded my interest in species conservation by showing me how spatial analysis can help identify the dynamics of movement corridors and the impacts of habitat fragmentation. It emphasized the complexity of factors influencing species movement and habitat selection.
+This assignment deepened my interest in species conservation by giving me a glimpse into how conservationists study the impacts of human development on endangered species. Through spatial analysis, I saw firsthand how movement corridors are shaped by habitat fragmentation and how crucial it is to consider these dynamics when planning development. Mapping least-cost paths made me feel like a conservationist myself, applying real-world methods to assess connectivity and identify risks to wildlife. It reinforced my appreciation for this type of work and made me envision the possibility of contributing to similar studies in the future.
 
-#### **Skills Gained:**
+**Skills Gained:**
 
 -   Least Cost Path Analysis (ArcGIS Pro)
 
@@ -234,17 +220,17 @@ One key aspect of this project involved simulating **landscape changes over 1000
 
 -   **Steady-state conditions** – Over time, the model projected that mature forests would **stabilize above 30%**, but this depended on continued reductions in harvest rates.
 
-#### Reflection
+**Reflection:**
 
 This project reinforced the well-known quote: “All models are wrong, but some are useful.” The goal was not to produce perfectly accurate predictions but rather to explore how different management decisions influence long-term forest dynamics. By adjusting harvest rates and observing their effects, I could see how even small policy changes significantly alter the landscape over time. This experience served as an important reminder that models should not be taken at face value—they are simplifications of reality and should always be interpreted with caution. The real power of models lies in their ability to help explore scenarios, test assumptions, and guide better decision-making rather than provide absolute answers.
 
-#### Skills Gained
+**Skills Gained:**
 
--   **Markov modeling** for landscape change analysis
+-   Markov modeling
 
--   **Evaluating long-term impacts** of forest management decisions
+-   Impact Evaluation
 
--   **Interpreting model outputs** while considering their limitations
+-   Interpreting model outputs
 
 ------------------------------------------------------------------------
 

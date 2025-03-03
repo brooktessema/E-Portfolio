@@ -1,0 +1,318 @@
+---
+title: "Geospatial Projects"
+format: html
+editor: visual
+---
+
+Welcome to the Geospatial Projects page!
+
+Here, you'll find a collection of my work, showcasing my journey from the humble beginnings of exploring geospatial data to tackling advanced projects in my graduate studies. Each project highlights my growth in using spatial analysis tools to address real-world environmental challenges.
+
+------------------------------------------------------------------------
+
+### **Monitoring Mangrove Restoration Using Sentinel - 2 Imagery**
+
+As the capstone project of my Master's program in Geomatics for Environmental Management, this project is a significant culmination of my academic journey. For my project, I collaborated with **Blue Ventures**, a marine conservation organization focused on coastal ecosystem restoration ([learn more about Blue Ventures](https://blueventures.org/what-we-do/)). I aimed to monitor mangrove restoration efforts in the Bay of Assassins, Madagascar. Using Sentinel-2 satellite imagery, the project evaluates changes in mangrove forest area and health from 2019 to 2024, supporting Blue Ventures’ mission to protect and restore mangroves in the region.
+
+My study investigates the question: **To what extent can Sentinel-2 imagery detect changes in mangrove forest area and health at restoration sites in Madagascar?"** I answer this by quantifying mangrove vegetation changes, identify areas of growth and loss, and assess vegetation health.
+
+#### **Methods & Tools**
+
+-   **Data**: Sentinel-2 satellite imagery (2019–2024).
+
+-   **Tool**: Google Earth Engine (GEM v2) for time-series analysis.
+
+-   **Analysis**:
+
+    -   Quantify changes in mangrove extent over time.
+
+    -   Identify areas of significant growth and loss.
+
+    -   Assess vegetation health using spectral indices (NDVI, EVI).
+
+This research is particularly important because mangrove ecosystems play a vital role in coastal protection, carbon sequestration, and supporting biodiversity. You can read my full report here but I've summarized and visualized some of my results below.
+
+**Classification Outputs (2019-2024)**\
+This visualization shows the changes in mangrove forest extent and vegetation health over the past five years, highlighting areas of growth, loss, and overall restoration progress in the Bay of Assassins, Madagascar.
+
+```{r leaflet, include = FALSE}
+library(dplyr); library(leaflet)
+
+m <- leaflet() %>%
+  addProviderTiles("Esri.WorldImagery") %>%
+  addScaleBar(position = c("bottomleft")) %>%
+  setView(-123.1207, 49.2827, zoom = 11)
+
+```
+
+```{r map, echo=FALSE}
+
+```
+
+#### **Skills Gained:**
+
+-   Satellite Imagery Analysis (Sentinel-2)
+
+-   Time-Series Analysis (Google Earth Engine)
+
+-   Mangrove Vegetation Change Detection
+
+-   Vegetation Health Assessment (NDVI, EVI)
+
+-   Data Classification and Visualization
+
+-   Environmental Monitoring & Reporting
+
+------------------------------------------------------------------------
+
+### **Using Python for Geo-spatial Analysis**
+
+For this project, I applied three geo-processing techniques, intersect, buffer, and area calculation, to my capstone research on mangrove ecosystems. Using Python, I intersected my study area with the Global Mangrove Watch dataset, applied a 25-meter buffer to the mangroves, and calculated their total area. I also automated data acquisition by scripting a download process for the datasets.
+
+**Methods with Code Snippets:**
+
+The first steps was to download the Global Mangrove Watch dataset. The code snippet below shows the automated downloading and extraction of Global Mangrove Watch data.
+
+::: {.panel-tabset group="language"}
+## Automated Downloading of Mangrove Data
+
+``` (.python)
+import requests
+import zipfile
+url = "https://zenodo.org/records/6894273/files/gmw_v3_2020_vec.zip?download=1"
+
+#Fetching and downloading the data
+data = requests.get(url)
+
+#saving data to a file
+with open('boa_mangrove_data.zip', 'wb') as file:
+    file.write(data.content)
+print("Download Completed Successfully")
+
+#Extracting data from ZIP file and saving in data folder
+zip_file_path = 'boa_mangrove_data.zip'
+extract_file = 'data_' # Data folder where I want to save the extracted contents
+
+# Opening the ZIP file
+with zipfile.ZipFile(zip_file_path, 'r') as zip_ref:
+    zip_ref.extractall(extract_file)
+
+print(f'Contents extracted to: {extract_file}')
+```
+
+## Geo-Processing Steps
+
+``` (.python)
+    # Term Concept 2.1 - Using Intersect to extract mangroves in AOI 
+    from Global Mangrove Watch (GMW) Data
+    arcpy.analysis.Intersect(['gmw_v3_2020_vec.shp',   
+    'TAHIRY_HONKO_MANAGEMENT_AREA.shp'], 
+    "boa_mangroves.shp", "ALL") 
+    print('Mangroves clipped successfully.')
+
+    # Term Concept 2.2 - Creating the 25 meter buffer for mangroves
+    boa_buffer = arcpy.analysis.Buffer(in_features='boa_mangroves.shp',
+    out_feature_class='boa_buffer.shp', 
+    buffer_distance_or_field='25 meters', dissolve_option="ALL")
+    print('Buffer created successfully.')
+
+    #Term Concept 3 - Calculating Total Area of Mangroves
+    mangrove_areas = list() #Creating an empty list to store output of Search 
+    Cursor
+    with arcpy.da.SearchCursor("boa_mangroves.shp", ["Shape_Area"]) as cursor:
+        for row in cursor:
+            mangrove_areas.append(row[0]) #adding results from Shape_Area into 
+            list
+    total_area = sum(mangrove_areas) * 100 #converting area from Square Km to ha
+    print("Total Mangrove Area (ha):",total_area,"ha")
+    del cursor
+    del row
+```
+
+(Assuming *nir* and *red* are numpy arrays)
+:::
+
+**Reflection:**\
+I really enjoyed the opportunity to apply my Python skills beyond the classroom and directly to my research. Writing my own code to process geo-spatial data, instead of pre-defined tools, was both challenging and rewarding. What made this project even more exciting was automating the workflow by scripting data set downloads. This experience reinforced how powerful Python can be in geo-spatial analysis and gave me confidence in integrating coding into my research more effectively.
+
+#### **Skills Gained:**
+
+-   Vector Geoprocessing (Intersection & Buffering)
+
+-   Search Cursors for Data Extraction
+
+-   R Programming for Remote Sensing Analysis
+
+-   Satellite Data Download & Extraction
+
+-   Data Organization & Workflow Development
+
+------------------------------------------------------------------------
+
+### **Investigating Species Movement Corridors**
+
+**Overview:**\
+For this assignment, I performed a Least Cost Path analysis in ArcGIS Pro to evaluate optimal routes between a source and target location, considering environmental factors like terrain, land cover, and roads. The goal was to determine the most efficient path by calculating a cost raster, which incorporates various factors that influence movement, such as slope and proximity to roads.
+
+**Methods & Tools:**\
+Using ArcGIS Pro, I created a cost raster incorporating factors like terrain slope, land cover, and proximity to roads. I then performed the Least Cost Path analysis to identify the most efficient route between the source and target locations.
+
+**Key Results:**\
+The analysis provided the optimal route based on minimized movement costs and highlighted the impact of terrain and land cover on accessibility.
+
+![Least Cost Map of Grizzly Bears Habitat](images/BT_GEM-510_Least_Cost_Map%20conv%201.png){fig-align="center" width="15cm"}
+
+**Reflection:**\
+This assignment expanded my interest in species conservation by showing me how spatial analysis can help identify the dynamics of movement corridors and the impacts of habitat fragmentation. It emphasized the complexity of factors influencing species movement and habitat selection.
+
+#### **Skills Gained:**
+
+-   Least Cost Path Analysis (ArcGIS Pro)
+
+-   Cost Raster Creation (Terrain, Land Cover, Roads)
+
+-   Spatial Analysis for Species Conservation
+
+-   Impact of Habitat Fragmentation on Species Movement
+
+------------------------------------------------------------------------
+
+### **LiDAR Data Processing: From Basics to Tree Segmentation**
+
+I first encountered LiDAR data during our graduate program orientation, where I was blown away by 3D visualizations created captured from a drone flight. This moment sparked my excitement to dive into the world of LiDAR and explore its potential in forestry.
+
+#### **Assignment 1: Getting Hands-On with LiDAR Basics**
+
+In this assignment, I learned how to process LiDAR data in R to create a Canopy Height Model (CHM), or as I like to call it, "tree height map." The goal was to familiarize myself with handling .las files, working with multiple tiles, and extracting point clouds from specific forest plots. I generated digital elevation models (DEMs) and CHMs to visualize tree heights and analyzed plot-level metrics to describe vegetation structure. It was a great introduction to organizing data, normalizing point clouds, and creating useful forestry products.
+
+Results of CHMs
+
+#### **Assignment 2: Diving Deeper with Tree Segmentation**
+
+The second assignment took me to the next level, where I worked with LiDAR data from the Malcolm Knapp Research Forest to identify individual trees. Using the [lidR](https://r-lidar.github.io/lidRbook/) package in R, I compared algorithms for tree detection by analyzing point clouds and CHMs. I fine-tuned parameters to improve results and deepened my understanding of segmentation methods through practical questions.
+
+Segmented Trees 3D Visualizations
+
+#### **Reflection:**
+
+It’s incredible to see how quickly I progressed from a curious observer to someone who can process and segment LiDAR data with confidence. Each step, from mapping terrain to identifying individual trees, has expanded my understanding of LiDAR’s potential in forestry. I'm excited to continue exploring this technology's applications in environmental monitoring.
+
+#### **Skills Gained:**
+
+-   LiDAR Data Processing
+
+-   Canopy Height Model (CHM) Creation
+
+-   Point Cloud Classification
+
+-   Tree Segmentation
+
+-   Algorithm Comparison
+
+-   R Programming (lidR package)
+
+------------------------------------------------------------------------
+
+### **Exploring Urban Expansion in the Kitchener-Waterloo Region: My First Project**
+
+Reflecting on this project always brings me back to the early days of my remote sensing journey. It was during my undergraduate years, when I first introduced to the field of geomatics, and intrigued by the idea of examining the world from a distance and without physical contact a.k.a "remote sensing". This project marked the beginning of my journey in remote sensing and how satellite imagery can reveal changes in the world over time.
+
+#### **Overview:**
+
+For this project, I used Landsat images from 1990 to 2020 to visualize and quantify how urban land cover had changed over the 30-year period. I used an ISODATA unsupervised classification algorithm to categorize the images into four land cover classes: vegetation, water, built-up areas, and barren cropland. I then performed a bi-temporal change detection analysis to identify urban expansion. The results revealed a 16.5% increase in the urban landscape, mostly replacing barren cropland. This urban sprawl was driven by rapid population growth, and the spatial pattern was scattered, emphasizing the need for monitoring urban growth to reduce its environmental impact.
+
+#### **Results:**
+
+SLIDER WITH TWO IMAGES
+
+#### **Reflection:**
+
+Looking at this project now, I can’t help but reflect on how much I’ve grown in the remote sensing field. At the time, I was just starting to understand the process, working with image classification but without any coding. Today, I’m able to tackle much more complex analyses and understand the underlying principles more deeply.
+
+#### **Skills Gained:**
+
+-   Image Classification
+
+-   Change Detection Analysis
+
+-   Geo-spatial Analysis
+
+-   Report Writing
+
+## Code Snippets
+
+Sample code snippet. Notice that you can provide a toggle to switch between coding languages - this is referred to as a 'tabset' in quarto. It is good practice to try and convert your R code to python, and vice-versa to demonstrate coding proficiency. For example, let's showcase a function for calculating NDVI in R and Python.
+
+::: {.panel-tabset group="language"}
+## R
+
+``` (.r)
+calc_ndvi <- function(nir, red){
+  ndvi <- (nir-red)/(nir+red)
+  return(ndvi)
+}
+```
+
+(Assuming *nir* and *red* are terra rast objects)
+
+## Python
+
+``` (.python)
+def calc_ndvi(nir, red): 
+  ndvi = (nir - red)/(nir + red)
+  return(ndvi)
+```
+
+(Assuming *nir* and *red* are numpy arrays)
+:::
+
+------------------------------------------------------------------------
+
+------------------------------------------------------------------------
+
+## External links
+
+You can also provide a frame linking to external websites. For example, here is a Google Earth Engine application I developed - which I embedded in this webpage using the code below:
+
+```{code}
+
+<iframe width="900" height="700"
+src="https://ee-melserramon.projects.earthengine.app/view/thermal-analysis-tool">
+</iframe>
+```
+
+The full-screen GEE application is available [here](https://ee-melserramon.projects.earthengine.app/view/thermal-analysis-tool) in case you're interested.
+
+(To use the GEE tool, navigate to any city you'd like, hit apply filters, and click anywhere on the map to retrieve a time-series of Landsat surface temperature observations for that point. Areas where the maximum temp exceeded 35 degrees Celsius in your date-range are highlighted in red.)
+
+```{=html}
+<iframe width="800" height="700" src="https://ee-melserramon.projects.earthengine.app/view/thermal-analysis-tool"></iframe>
+```
+
+## External links
+
+You can also provide a frame linking to external websites. For example, here is a Google Earth Engine application I developed - which I embedded in this webpage using the code below:
+
+`{code}  <iframe width="900" height="700" src="https://ee-melserramon.projects.earthengine.app/view/thermal-analysis-tool"> </iframe>}`
+
+The full-screen GEE application is available [here](https://ee-melserramon.projects.earthengine.app/view/thermal-analysis-tool) in case you're interested.
+
+(To use the GEE tool, navigate to any city you'd like, hit apply filters, and click anywhere on the map to retrieve a time-series of Landsat surface temperature observations for that point. Areas where the maximum temp exceeded 35 degrees Celsius in your date-range are highlighted in red.)
+
+```{=html}
+<iframe width="900" height="700" src="https://ee-melserramon.projects.earthengine.app/view/thermal-analysis-tool"></iframe>
+```
+
+## External links
+
+You can also provide a frame linking to external websites. For example, here is a Google Earth Engine application I developed - which I embedded in this webpage using the code below:
+
+`{code}  <iframe width="900" height="700" src="https://ee-melserramon.projects.earthengine.app/view/thermal-analysis-tool"> </iframe>}`
+
+The full-screen GEE application is available [here](https://ee-melserramon.projects.earthengine.app/view/thermal-analysis-tool) in case you're interested.
+
+(To use the GEE tool, navigate to any city you'd like, hit apply filters, and click anywhere on the map to retrieve a time-series of Landsat surface temperature observations for that point. Areas where the maximum temp exceeded 35 degrees Celsius in your date-range are highlighted in red.)
+
+```{=html}
+<iframe width="900" height="700" src="https://ee-melserramon.projects.earthengine.app/view/thermal-analysis-tool"></iframe>
+```
