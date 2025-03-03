@@ -226,7 +226,6 @@ print(f'Contents extracted to: {extract_file}')</code></pre>
     print("Total Mangrove Area (ha):",total_area,"ha")
     del cursor
     del row</code></pre>
-<p>(Assuming <em>nir</em> and <em>red</em> are numpy arrays)</p>
 </div>
 </div>
 </div>
@@ -235,10 +234,8 @@ I really enjoyed the opportunity to apply my Python skills beyond the classroom 
 <section id="skills-gained" class="level4">
 <h4 class="anchored" data-anchor-id="skills-gained"><strong>Skills Gained:</strong></h4>
 <ul>
-<li><p>Vector Geoprocessing (Intersection &amp; Buffering)</p></li>
-<li><p>Search Cursors for Data Extraction</p></li>
-<li><p>R Programming for Remote Sensing Analysis</p></li>
-<li><p>Satellite Data Download &amp; Extraction</p></li>
+<li><p>Python Programming for Geo-processing</p></li>
+<li><p>Web Data Download &amp; Extraction</p></li>
 <li><p>Data Organization &amp; Workflow Development</p></li>
 </ul>
 <hr>
@@ -268,27 +265,13 @@ This assignment deepened my interest in species conservation by giving me a glim
 </section>
 <section id="modeling-forest-landscape-changes-with-markov-models" class="level3">
 <h3 class="anchored" data-anchor-id="modeling-forest-landscape-changes-with-markov-models"><strong>Modeling Forest Landscape Changes with Markov Models</strong></h3>
-<p>As part of my Landscape Ecology course, I explored Markov models, a tool widely used in landscape ecology to predict future land cover changes based on past transitions. One of our labs focused on modeling landscape changes in the Pacific Northwestern forests using a Markov model. By analyzing Landsat imagery data from 1972, 1984, and 1991, we classified forest cover into different age classes and calculated transition probabilities for these classes over time. The Markov model was then used to:</p>
-<ul>
-<li><p>Project future forest composition under different management scenarios.</p></li>
-<li><p>Evaluate the impact of reduced harvesting rates on forest cover types.</p></li>
-<li><p>Assess the long-term sustainability of current forest management practices.</p></li>
-</ul>
-<p>One key aspect of this project involved simulating <strong>landscape changes over 1000 years</strong>, as seen in my figure below, to examine how forest cover proportions would stabilize under different harvesting scenarios.</p>
+<p>As part of my Landscape Ecology course, I explored Markov models, a tool widely used to predict future land cover changes based on past transitions. One of our labs focused on modeling landscape changes in the Pacific Northwestern forests using a Markov model. A key aspect of this lab involved simulating <strong>landscape changes over 1000 years</strong>, to examine how forest cover proportions would stabilize under different harvesting scenarios. The figure below was a result of me reducing the rate of harvest by 50% to attempt to retain 30% of old growth (C5) by end of century.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/Markov_Model_plot.png" class="img-fluid figure-img" width="588"></p>
 <figcaption>Simulating Longterm Transition of Forest of different age classes</figcaption>
 </figure>
 </div>
-<section id="key-findings" class="level4">
-<h4 class="anchored" data-anchor-id="key-findings">Key Findings</h4>
-<ul>
-<li><p><strong>Longer timesteps improve accuracy</strong> – The <strong>1972–1984 projection</strong> was more reliable than <strong>1984–1991</strong>, likely due to the longer timeframe capturing more stable trends.</p></li>
-<li><p><strong>Harvest rates impact old-growth forests</strong> – Reducing harvest rates slowed forest loss and increased the proportion of mature forests over time.</p></li>
-<li><p><strong>Sustainability concerns</strong> – The <strong>1972–1984 harvesting rates led to a significant decline in old-growth forests</strong>, with their proportion falling below 20%, indicating unsustainable practices.</p></li>
-<li><p><strong>Steady-state conditions</strong> – Over time, the model projected that mature forests would <strong>stabilize above 30%</strong>, but this depended on continued reductions in harvest rates.</p></li>
-</ul>
 <p><strong>Reflection:</strong></p>
 <p>This project reinforced the well-known quote: “All models are wrong, but some are useful.” The goal was not to produce perfectly accurate predictions but rather to explore how different management decisions influence long-term forest dynamics. By adjusting harvest rates and observing their effects, I could see how even small policy changes significantly alter the landscape over time. This experience served as an important reminder that models should not be taken at face value—they are simplifications of reality and should always be interpreted with caution. The real power of models lies in their ability to help explore scenarios, test assumptions, and guide better decision-making rather than provide absolute answers.</p>
 <p><strong>Skills Gained:</strong></p>
@@ -299,7 +282,6 @@ This assignment deepened my interest in species conservation by giving me a glim
 </ul>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

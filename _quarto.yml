@@ -17,11 +17,7 @@ website:
           - href: rsensing.qmd
             text: Remote Sensing
           - href: writing.qmd
-            text: Writing & Research
-      - href: capstone_project.qmd
-        text: Capstone Project 
-      - href: career.qmd
-        text: Career Highlights      
+            text: Writing & Research   
       
         
 format:

@@ -73,8 +73,6 @@ print(f'Contents extracted to: {extract_file}')
     del cursor
     del row
 ```
-
-(Assuming *nir* and *red* are numpy arrays)
 :::
 
 **Reflection:**\
@@ -82,13 +80,9 @@ I really enjoyed the opportunity to apply my Python skills beyond the classroom 
 
 #### **Skills Gained:**
 
--   Vector Geoprocessing (Intersection & Buffering)
+-   Python Programming for Geo-processing
 
--   Search Cursors for Data Extraction
-
--   R Programming for Remote Sensing Analysis
-
--   Satellite Data Download & Extraction
+-   Web Data Download & Extraction
 
 -   Data Organization & Workflow Development
 
@@ -120,27 +114,9 @@ This assignment deepened my interest in species conservation by giving me a glim
 
 ### **Modeling Forest Landscape Changes with Markov Models**
 
-As part of my Landscape Ecology course, I explored Markov models, a tool widely used in landscape ecology to predict future land cover changes based on past transitions. One of our labs focused on modeling landscape changes in the Pacific Northwestern forests using a Markov model. By analyzing Landsat imagery data from 1972, 1984, and 1991, we classified forest cover into different age classes and calculated transition probabilities for these classes over time. The Markov model was then used to:
-
--   Project future forest composition under different management scenarios.
-
--   Evaluate the impact of reduced harvesting rates on forest cover types.
-
--   Assess the long-term sustainability of current forest management practices.
-
-One key aspect of this project involved simulating **landscape changes over 1000 years**, as seen in my figure below, to examine how forest cover proportions would stabilize under different harvesting scenarios.
+As part of my Landscape Ecology course, I explored Markov models, a tool widely used to predict future land cover changes based on past transitions. One of our labs focused on modeling landscape changes in the Pacific Northwestern forests using a Markov model. A key aspect of this lab involved simulating **landscape changes over 1000 years**, to examine how forest cover proportions would stabilize under different harvesting scenarios. The figure below was a result of me reducing the rate of harvest by 50% to attempt to retain 30% of old growth (C5) by end of century.
 
 ![Simulating Longterm Transition of Forest of different age classes](images/Markov_Model_plot.png){fig-align="center" width="588"}
-
-#### Key Findings
-
--   **Longer timesteps improve accuracy** – The **1972–1984 projection** was more reliable than **1984–1991**, likely due to the longer timeframe capturing more stable trends.
-
--   **Harvest rates impact old-growth forests** – Reducing harvest rates slowed forest loss and increased the proportion of mature forests over time.
-
--   **Sustainability concerns** – The **1972–1984 harvesting rates led to a significant decline in old-growth forests**, with their proportion falling below 20%, indicating unsustainable practices.
-
--   **Steady-state conditions** – Over time, the model projected that mature forests would **stabilize above 30%**, but this depended on continued reductions in harvest rates.
 
 **Reflection:**
 
