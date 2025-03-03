@@ -1,12 +1,12 @@
 ---
-title: "Geospatial Projects"
+title: "Remote Sensing Projects"
 format: html
 editor: visual
 ---
 
-Welcome to my Geospatial Projects page!
+**Welcome to my Remote Sensing Projects page!**
 
-Here, you'll find a collection of my work, showcasing my journey from the humble beginnings of exploring geospatial data to tackling advanced projects in my graduate studies. Each project highlights my growth in using spatial analysis tools to address real-world environmental challenges.
+In this section, you’ll find a collection of my remote sensing projects that reflect my journey from exploring geospatial data as an undergraduate to tackling advanced projects using programming languages R and Python. Remote Sensing is an essential tool for environmental management as it offers powerful tools to map, monitor, and manage Earth's ecosystems.
 
 ------------------------------------------------------------------------
 
@@ -16,7 +16,7 @@ As the capstone project of my Master's program in Geomatics for Environmental Ma
 
 My study investigates the question: **To what extent can Sentinel-2 imagery detect changes in mangrove forest area and health at restoration sites in Madagascar?** I answer this by quantifying mangrove vegetation changes, identifying areas of growth and loss, and assess vegetation health overtime. The focus on mangroves in restoration areas supports Blue Ventures’ mission to protect and restore mangroves in the region.
 
-**Methods & Tools:**
+#### **Tools & Methods:**
 
 -   **Data**: Sentinel-2 satellite imagery (2019–2024), Mangrove Restoration sites in Madagascar
 
@@ -32,14 +32,13 @@ My study investigates the question: **To what extent can Sentinel-2 imagery dete
 
 My full report will be available here once the project ends, but I've summarized and visualized some of my results below.
 
-**Classification Outputs:**\
-![Map of Mangroves in Bay of Assassins from 2019-2024 showing changes in area overtime.](images/Classification Map Output 1.png){width="725"}
+#### **Key Results:** ![Map of Mangroves in Bay of Assassins from 2019-2024 showing changes in area overtime.](images/Layout.jpg)
 
-**Reflection:**
+#### **Reflection:**
 
-This research is particularly important because mangrove ecosystems play a vital role in coastal protection, carbon sequestration, and supporting biodiversity. I was excited by the opportunity of this project in supporting real world coutcomes which include Blue Ventures’ mission to protect and restore mangroves in the region.
+This project was a deeply rewarding experience that not just expanded my knowledge and technical skills but also connected me to a cause I deeply care about. Growing up in Ethiopia, I have always I’ve always felt a strong pull toward supporting environmental conservation in Africa, and this project gave me the chance to do just that. Working with Blue Ventures and local partners in Madagascar, I saw firsthand the real-world impact of our research helping to restore mangrove ecosystems that are vital for coastal protection and biodiversity. Beyond the technical skills in GIS and remote sensing, I learned so much about time management, communication, and succesful client engagement. Overall, this Capstone project was an enriching experience that allowed me to combine technical expertise with a passion for positive change. I feel fortunate to have worked on something so impactful and meaningful, and this project has further strengthened my commitment to supporting environmental and sustainability efforts worldwide.
 
-**Skills Gained:**
+#### **Skills Gained:**
 
 -   Satellite Imagery Analysis (Sentinel-2)
 
@@ -59,7 +58,7 @@ This research is particularly important because mangrove ecosystems play a vital
 
 For this project, I applied three geo-processing techniques, intersect, buffer, and area calculation, to my capstone research on mangrove ecosystems. Using Python, I intersected my study area with the Global Mangrove Watch data set, applied a 25-meter buffer to the mangroves, and calculated their total area. I also automated data acquisition by scripting a download process for the datasets.
 
-**Methods with Code Snippets:**
+#### **Methods with Code Snippets:**
 
 The first steps was to download data friom the Global Mangrove Watch online database. Next came Click on the headings below to see my code the automated downloading and extraction of Global Mangrove Watch data.
 
@@ -122,7 +121,7 @@ del row
 **Reflection:**\
 I really enjoyed the opportunity to apply my Python skills beyond the classroom and directly to my research. Writing my own code to process geo-spatial data, instead of pre-defined tools, was both challenging and rewarding. What made this project even more exciting was automating the workflow by scripting data set downloads. This experience reinforced how powerful Python can be in geo-spatial analysis and gave me confidence in integrating coding into my research more effectively.
 
-**Skills Gained:**
+#### **Skills Gained:**
 
 -   Vector Geoprocessing (Intersection & Buffering)
 
@@ -133,30 +132,6 @@ I really enjoyed the opportunity to apply my Python skills beyond the classroom 
 -   Satellite Data Download & Extraction
 
 -   Data Organization & Workflow Development
-
-------------------------------------------------------------------------
-
-### **Investigating Movement Corridors for Grizzly Bears in Alberta**
-
-For this assignment, I performed a **Least Cost Path** analysis in ArcGIS Pro to evaluate optimal routes between a source and target location, considering environmental factors like terrain, land cover, and roads. The goal was to determine the most efficient path for a grizzly bear when travelling through a landscape. I did this by calculating a cost raster, which incorporates the obstacles associated with moving through an area, such as uneven slopes, proximity to roads, and changing land cover.
-
-**Key Results:**\
-The analysis provided the optimal route based on minimized movement costs and highlighted the impact of terrain and land cover on accessibility in a habitat.
-
-![Least Cost Map of Grizzly Bears Habitat](images/BT_GEM-510_Least_Cost_Map%20conv%201.png){fig-align="center" width="13.8cm"}
-
-**Reflection:**\
-This assignment deepened my interest in species conservation by giving me a glimpse into how conservationists study the impacts of human development on endangered species. Through spatial analysis, I saw firsthand how movement corridors are shaped by habitat fragmentation and how crucial it is to consider these dynamics when planning development. Mapping least-cost paths made me feel like a conservationist myself, applying real-world methods to assess connectivity and identify risks to wildlife. It reinforced my appreciation for this type of work and made me envision the possibility of contributing to similar studies in the future.
-
-**Skills Gained:**
-
--   Least Cost Path Analysis (ArcGIS Pro)
-
--   Cost Raster Creation (Terrain, Land Cover, Roads)
-
--   Spatial Analysis for Species Conservation
-
--   Impact of Habitat Fragmentation on Species Movement
 
 ------------------------------------------------------------------------
 
@@ -193,44 +168,6 @@ It’s incredible to see how quickly I progressed from a curious observer to som
 -   Algorithm Comparison
 
 -   R Programming (lidR package)
-
-------------------------------------------------------------------------
-
-### **Modeling Forest Landscape Changes with Markov Models**
-
-As part of my Landscape Ecology course, I explored Markov models, a tool widely used in landscape ecology to predict future land cover changes based on past transitions. One of our labs focused on modeling landscape changes in the Pacific Northwestern forests using a Markov model. By analyzing Landsat imagery data from 1972, 1984, and 1991, we classified forest cover into different age classes and calculated transition probabilities for these classes over time. The Markov model was then used to:
-
--   Project future forest composition under different management scenarios.
-
--   Evaluate the impact of reduced harvesting rates on forest cover types.
-
--   Assess the long-term sustainability of current forest management practices.
-
-One key aspect of this project involved simulating **landscape changes over 1000 years**, as seen in my figure below, to examine how forest cover proportions would stabilize under different harvesting scenarios.
-
-![Simulating Longterm Transition of Forest of different age classes](images/Markov_Model_plot.png){fig-align="center" width="588"}
-
-#### Key Findings
-
--   **Longer timesteps improve accuracy** – The **1972–1984 projection** was more reliable than **1984–1991**, likely due to the longer timeframe capturing more stable trends.
-
--   **Harvest rates impact old-growth forests** – Reducing harvest rates slowed forest loss and increased the proportion of mature forests over time.
-
--   **Sustainability concerns** – The **1972–1984 harvesting rates led to a significant decline in old-growth forests**, with their proportion falling below 20%, indicating unsustainable practices.
-
--   **Steady-state conditions** – Over time, the model projected that mature forests would **stabilize above 30%**, but this depended on continued reductions in harvest rates.
-
-**Reflection:**
-
-This project reinforced the well-known quote: “All models are wrong, but some are useful.” The goal was not to produce perfectly accurate predictions but rather to explore how different management decisions influence long-term forest dynamics. By adjusting harvest rates and observing their effects, I could see how even small policy changes significantly alter the landscape over time. This experience served as an important reminder that models should not be taken at face value—they are simplifications of reality and should always be interpreted with caution. The real power of models lies in their ability to help explore scenarios, test assumptions, and guide better decision-making rather than provide absolute answers.
-
-**Skills Gained:**
-
--   Markov modeling
-
--   Impact Evaluation
-
--   Interpreting model outputs
 
 ------------------------------------------------------------------------
 

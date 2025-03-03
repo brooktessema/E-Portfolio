@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Content &amp; Deliverables – Your E-Portfolio</title>
+<title>GIS and Spatial Analysis – My E-Portfolio</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -79,7 +79,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">Your E-Portfolio</span>
+    <span class="navbar-title">My E-Portfolio</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -93,16 +93,35 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./resume.html"> 
+    <a class="nav-link" href="./images/BTessema_Resume_E-Portfolio.pdf"> 
 <span class="menu-text">Resume</span></a>
   </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-mgem-projects" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">MGEM Projects</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-mgem-projects">    
+        <li>
+    <a class="dropdown-item" href="./gis.html">
+ <span class="dropdown-text">GIS and Spatial Analysis</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./rsensing.html">
+ <span class="dropdown-text">Remote Sensing</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./writing.html">
+ <span class="dropdown-text">Writing &amp; Research</span></a>
+  </li>  
+    </ul>
+  </li>
   <li class="nav-item">
-    <a class="nav-link" href="./publications.html"> 
-<span class="menu-text">Publications</span></a>
+    <a class="nav-link" href="./capstone_project.html"> 
+<span class="menu-text">Capstone Project</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./content_development.html" aria-current="page"> 
-<span class="menu-text">Content Development</span></a>
+    <a class="nav-link" href="./career.html"> 
+<span class="menu-text">Career Highlights</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -120,7 +139,9 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#project-deliverable-1" id="toc-project-deliverable-1" class="nav-link active" data-scroll-target="#project-deliverable-1">Project Deliverable 1</a></li>
+  <li><a href="#using-python-for-geo-spatial-analysis" id="toc-using-python-for-geo-spatial-analysis" class="nav-link active" data-scroll-target="#using-python-for-geo-spatial-analysis"><strong>Using Python for Geo-spatial Analysis</strong></a></li>
+  <li><a href="#investigating-movement-corridors-for-grizzly-bears-in-alberta" id="toc-investigating-movement-corridors-for-grizzly-bears-in-alberta" class="nav-link" data-scroll-target="#investigating-movement-corridors-for-grizzly-bears-in-alberta"><strong>Investigating Movement Corridors for Grizzly Bears in Alberta</strong></a></li>
+  <li><a href="#modeling-forest-landscape-changes-with-markov-models" id="toc-modeling-forest-landscape-changes-with-markov-models" class="nav-link" data-scroll-target="#modeling-forest-landscape-changes-with-markov-models"><strong>Modeling Forest Landscape Changes with Markov Models</strong></a></li>
   </ul>
 </nav>
     </div>
@@ -129,7 +150,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Content &amp; Deliverables</h1>
+<h1 class="title">GIS and Spatial Analysis</h1>
 </div>
 
 
@@ -146,11 +167,139 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="project-deliverable-1" class="level1">
-<h1>Project Deliverable 1</h1>
-<p>This is a sample page where you can archive project deliverables.</p>
+<p><strong>Welcome to the GIS and Spatial Analysis Projects page!</strong></p>
+<p>Here, you’ll find a collection of my work, showcasing my journey from the humble beginnings of exploring geospatial data to tackling advanced projects in my graduate studies using programming languages R and Python. Each project highlights my growth in using spatial analysis tools to address real-world environmental challenges.</p>
+<hr>
+<section id="using-python-for-geo-spatial-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="using-python-for-geo-spatial-analysis"><strong>Using Python for Geo-spatial Analysis</strong></h3>
+<p>For this project, I applied three geo-processing techniques, intersect, buffer, and area calculation, to my capstone research on mangrove ecosystems. Using Python, I intersected my study area with the Global Mangrove Watch dataset, applied a 25-meter buffer to the mangroves, and calculated their total area. I also automated data acquisition by scripting a download process for the datasets.</p>
+<p><strong>Methods with Code Snippets:</strong></p>
+<p>The first steps was to download the Global Mangrove Watch dataset. The code snippet below shows the automated downloading and extraction of Global Mangrove Watch data.</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset" data-group="language">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">Automated Downloading of Mangrove Data</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Geo-Processing Steps</a></li></ul>
+<div class="tab-content" data-group="language">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<pre class="(.python)"><code>import requests
+import zipfile
+url = "https://zenodo.org/records/6894273/files/gmw_v3_2020_vec.zip?download=1"
+
+#Fetching and downloading the data
+data = requests.get(url)
+
+#saving data to a file
+with open('boa_mangrove_data.zip', 'wb') as file:
+    file.write(data.content)
+print("Download Completed Successfully")
+
+#Extracting data from ZIP file and saving in data folder
+zip_file_path = 'boa_mangrove_data.zip'
+extract_file = 'data_' # Data folder where I want to save the extracted contents
+
+# Opening the ZIP file
+with zipfile.ZipFile(zip_file_path, 'r') as zip_ref:
+    zip_ref.extractall(extract_file)
+
+print(f'Contents extracted to: {extract_file}')</code></pre>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<pre class="(.python)"><code>    # Term Concept 2.1 - Using Intersect to extract mangroves in AOI 
+    from Global Mangrove Watch (GMW) Data
+    arcpy.analysis.Intersect(['gmw_v3_2020_vec.shp',   
+    'TAHIRY_HONKO_MANAGEMENT_AREA.shp'], 
+    "boa_mangroves.shp", "ALL") 
+    print('Mangroves clipped successfully.')
+
+    # Term Concept 2.2 - Creating the 25 meter buffer for mangroves
+    boa_buffer = arcpy.analysis.Buffer(in_features='boa_mangroves.shp',
+    out_feature_class='boa_buffer.shp', 
+    buffer_distance_or_field='25 meters', dissolve_option="ALL")
+    print('Buffer created successfully.')
+
+    #Term Concept 3 - Calculating Total Area of Mangroves
+    mangrove_areas = list() #Creating an empty list to store output of Search 
+    Cursor
+    with arcpy.da.SearchCursor("boa_mangroves.shp", ["Shape_Area"]) as cursor:
+        for row in cursor:
+            mangrove_areas.append(row[0]) #adding results from Shape_Area into 
+            list
+    total_area = sum(mangrove_areas) * 100 #converting area from Square Km to ha
+    print("Total Mangrove Area (ha):",total_area,"ha")
+    del cursor
+    del row</code></pre>
+<p>(Assuming <em>nir</em> and <em>red</em> are numpy arrays)</p>
+</div>
+</div>
+</div>
+<p><strong>Reflection:</strong><br>
+I really enjoyed the opportunity to apply my Python skills beyond the classroom and directly to my research. Writing my own code to process geo-spatial data, instead of pre-defined tools, was both challenging and rewarding. What made this project even more exciting was automating the workflow by scripting data set downloads. This experience reinforced how powerful Python can be in geo-spatial analysis and gave me confidence in integrating coding into my research more effectively.</p>
+<section id="skills-gained" class="level4">
+<h4 class="anchored" data-anchor-id="skills-gained"><strong>Skills Gained:</strong></h4>
+<ul>
+<li><p>Vector Geoprocessing (Intersection &amp; Buffering)</p></li>
+<li><p>Search Cursors for Data Extraction</p></li>
+<li><p>R Programming for Remote Sensing Analysis</p></li>
+<li><p>Satellite Data Download &amp; Extraction</p></li>
+<li><p>Data Organization &amp; Workflow Development</p></li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="investigating-movement-corridors-for-grizzly-bears-in-alberta" class="level3">
+<h3 class="anchored" data-anchor-id="investigating-movement-corridors-for-grizzly-bears-in-alberta"><strong>Investigating Movement Corridors for Grizzly Bears in Alberta</strong></h3>
+<p>For this assignment, I performed a <strong>Least Cost Path</strong> analysis in ArcGIS Pro to evaluate optimal routes between a source and target location, considering environmental factors like terrain, land cover, and roads. The goal was to determine the most efficient path for a grizzly bear when travelling through a landscape. I did this by calculating a cost raster, which incorporates the obstacles associated with moving through an area, such as uneven slopes, proximity to roads, and changing land cover.</p>
+<p><strong>Key Results:</strong><br>
+The analysis provided the optimal route based on minimized movement costs and highlighted the impact of terrain and land cover on accessibility in a habitat.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/BT_GEM-510_Least_Cost_Map conv 1.png" class="img-fluid figure-img" style="width:13.8cm"></p>
+<figcaption>Least Cost Map of Grizzly Bears Habitat</figcaption>
+</figure>
+</div>
+<p><strong>Reflection:</strong><br>
+This assignment deepened my interest in species conservation by giving me a glimpse into how conservationists study the impacts of human development on endangered species. Through spatial analysis, I saw firsthand how movement corridors are shaped by habitat fragmentation and how crucial it is to consider these dynamics when planning development. Mapping least-cost paths made me feel like a conservationist myself, applying real-world methods to assess connectivity and identify risks to wildlife. It reinforced my appreciation for this type of work and made me envision the possibility of contributing to similar studies in the future.</p>
+<p><strong>Skills Gained:</strong></p>
+<ul>
+<li><p>Least Cost Path Analysis (ArcGIS Pro)</p></li>
+<li><p>Cost Raster Creation (Terrain, Land Cover, Roads)</p></li>
+<li><p>Spatial Analysis for Species Conservation</p></li>
+<li><p>Mapping and Cartography</p></li>
+</ul>
+<hr>
+</section>
+<section id="modeling-forest-landscape-changes-with-markov-models" class="level3">
+<h3 class="anchored" data-anchor-id="modeling-forest-landscape-changes-with-markov-models"><strong>Modeling Forest Landscape Changes with Markov Models</strong></h3>
+<p>As part of my Landscape Ecology course, I explored Markov models, a tool widely used in landscape ecology to predict future land cover changes based on past transitions. One of our labs focused on modeling landscape changes in the Pacific Northwestern forests using a Markov model. By analyzing Landsat imagery data from 1972, 1984, and 1991, we classified forest cover into different age classes and calculated transition probabilities for these classes over time. The Markov model was then used to:</p>
+<ul>
+<li><p>Project future forest composition under different management scenarios.</p></li>
+<li><p>Evaluate the impact of reduced harvesting rates on forest cover types.</p></li>
+<li><p>Assess the long-term sustainability of current forest management practices.</p></li>
+</ul>
+<p>One key aspect of this project involved simulating <strong>landscape changes over 1000 years</strong>, as seen in my figure below, to examine how forest cover proportions would stabilize under different harvesting scenarios.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/Markov_Model_plot.png" class="img-fluid figure-img" width="588"></p>
+<figcaption>Simulating Longterm Transition of Forest of different age classes</figcaption>
+</figure>
+</div>
+<section id="key-findings" class="level4">
+<h4 class="anchored" data-anchor-id="key-findings">Key Findings</h4>
+<ul>
+<li><p><strong>Longer timesteps improve accuracy</strong> – The <strong>1972–1984 projection</strong> was more reliable than <strong>1984–1991</strong>, likely due to the longer timeframe capturing more stable trends.</p></li>
+<li><p><strong>Harvest rates impact old-growth forests</strong> – Reducing harvest rates slowed forest loss and increased the proportion of mature forests over time.</p></li>
+<li><p><strong>Sustainability concerns</strong> – The <strong>1972–1984 harvesting rates led to a significant decline in old-growth forests</strong>, with their proportion falling below 20%, indicating unsustainable practices.</p></li>
+<li><p><strong>Steady-state conditions</strong> – Over time, the model projected that mature forests would <strong>stabilize above 30%</strong>, but this depended on continued reductions in harvest rates.</p></li>
+</ul>
+<p><strong>Reflection:</strong></p>
+<p>This project reinforced the well-known quote: “All models are wrong, but some are useful.” The goal was not to produce perfectly accurate predictions but rather to explore how different management decisions influence long-term forest dynamics. By adjusting harvest rates and observing their effects, I could see how even small policy changes significantly alter the landscape over time. This experience served as an important reminder that models should not be taken at face value—they are simplifications of reality and should always be interpreted with caution. The real power of models lies in their ability to help explore scenarios, test assumptions, and guide better decision-making rather than provide absolute answers.</p>
+<p><strong>Skills Gained:</strong></p>
+<ul>
+<li><p>Markov modeling</p></li>
+<li><p>Impact Evaluation</p></li>
+<li><p>Interpreting model outputs</p></li>
+</ul>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
