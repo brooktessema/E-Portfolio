@@ -2,7 +2,7 @@
 title: "Brook Tessema"
 image: images/BT_Picture_2.jpg
 about:
-  template: jolla
+  template: trestles
   image-width: 20em
   image-shape: round
   links: 
@@ -15,8 +15,28 @@ about:
     - icon: envelope-at
       text: Email
       href: btessema92@gmail.com
+editor: 
+  markdown: 
+    wrap: 72
 ---
 
 **About Me!**
 
-My name is Brook, and I am a graduate student in the Masters of Geomatics for Environmental Management (MGEM) program's class of 2025. Originally from Ethiopia, Canada has been my home for the past seven years. I am pursuing the MGEM to deepen my understanding of geomatics concepts and tools, develop new technical and analytically skills, and enhance my qualifications for a career in environmental and resource management.
+My name is Brook, and I am a graduate student in the Masters of
+Geomatics for Environmental Management (MGEM) program's class of 2025.
+Originally from Ethiopia, Canada has been my home for the past seven
+years. I am pursuing the MGEM to deepen my understanding of geomatics
+concepts and tools, develop new technical and analytically skills, and
+enhance my qualifications for a career in environmental and resource
+management.
+
+**Professional Experiences & Education**
+
+-   Master of Geomatics for Environmental Management (MGEM) - University
+    of British Columbia, 2023–2024
+
+-   Climate Adaptation Analyst Resilience - Climate Risk Institute,
+    2021 - 2024
+
+-   Bachelor of Environmental Studies (Urban & Regional Environments)
+    York University, 2017–2021
