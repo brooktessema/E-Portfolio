@@ -1,6 +1,6 @@
 project:
   type: website
-  output-dir: /Users/brook.t/Documents/GitHub/E-Portfolio
+  output-dir: docs
 
 website:
   title: "My E-Portfolio"
